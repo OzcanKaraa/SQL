@@ -1,3 +1,5 @@
+/* 31.05.2023  */
+
 CREATE : Tablo olusturma
 
 CREATE table hr.ilktablo(
