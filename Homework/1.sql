@@ -3,15 +3,17 @@
 1- Employees tablosundaki iş unvanı 'Programcı' olan tüm çalışanların çalışan ID'sini,
 adını ve soyadını getirin.
 
-
+=>  Select Employee_ID, First_Name ,Last_Name from hr.Employee Where  Job_ID =IT_PROG
 
 
 2-Departments tablosundaki konum ID'si 1700 olan tüm departmanların departman
 ID'sini, departman adını ve yönetici ID'sini getirin.
 
+=>Select Departments_ID, Departments_Name ,MANAGER_ID from hr.Departments Where  Location_ID =1700
+
 3-Jobs tablosundaki maksimum maaşı $10,000'den büyük olan işlerin iş ID'sini, iş
 unvanını ve maksimum maaşı getirin
-
+=>Select Job_Title,Max_Salary from hr.JOBS Where  Max_Salary >$10,000 
 
 
 DIKKAT! : Asagidaki sogulari yazmadan once CTAS kullanarak tablolarin back up ini olusturup
@@ -25,10 +27,15 @@ yapin.
 
 
 4- "employees" tablosundaki "job_id" sütununun adını "position_id" olarak değiştirin.
+=>
+
 5- "employees" tablosundaki "salary" sütununun veri tipini NUMBER(10, 2)'den
 NUMBER(12, 2)'ye değiştirin.
+=>
+
 6-"departments" tablosundaki "department_name" sütununun adını "dept_name" olarak
 değiştirin.
+=>
 
  Öncelikle database uzerinde ‘test_user’ isimli bir kullanici yaratin
 7-⦁ "employees" tablosunda "full_name" sütununa SELECT iznini "test_user"
@@ -39,15 +46,23 @@ kullanıcısına verin.
 ⦁ Yeni bir sekmede test_user ile login olmayi deneyip employees de select ve
 insert yapip yapamadiginizi test edin.
 
+=>
+
 8-"employees" tablosunda "salary" sütunundaki INSERT iznini "test_user" kullanıcısından
 geri alın. sonucu test edin
+
+=>
 
 9-"employees" tablosundan yeni bir yedek tablo oluşturun ve bu tablo sadece
 "employee_id", "first_name" ve "last_name" sütunlarını içersin ve sadece tablo yapisini
 alsin. Icinde data / satir olmasin.
 
+=>
+
 10- "employees" tablosunda yer alan "hire_date" adlı tarih sütunundaki yılların sadece son
 iki hanesini alarak yeni bir table ve sütuna kaydeden bir CTAS sorgusu oluşturun.
+
+=> 
 
 11- Sehirler isimli 5 kolondan olusan bir tablo yaratin. Tablonun ozellikleri :
 ⦁ Plaka Kodu – 2 Karakter Sabit – Primary Key ve Bos olamaz
@@ -65,21 +80,22 @@ kullanarak)
 ⦁ Kalan tablonun CTAS ile backup ini yaratip , yarattiginiz tablonun icindeki veriyi
 truncate ediniz
 
-
+=>
 
 12-"SELECT" ifadesi ve "dual" tablosunu kullanarak ekrana "Merhaba, Dünya!" mesajını
 yazdıran bir sorgu yazın. 
 
-
+=>
 13-Oracle Dual tablosundan suanki system saat bilgisini cekiniz.
+=>
 
 14-"dual" tablosunu kullanarak iki sayının toplamını hesaplayan bir sorgu yazın.
 
-
+=>
 15-substr fonksiyonu ve dual tablosunu kullanarak "Merhaba, Dünya!" yazinin ilk 7
 karakterini ayni satir uzerinde "Merhaba, Dünya!" yazinin yaninda ilkkelime kolonunda
 gosteriniz.
-
+=>
 
 
 
