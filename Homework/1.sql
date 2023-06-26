@@ -4,6 +4,8 @@
 adını ve soyadını getirin.
 
 
+
+
 2-Departments tablosundaki konum ID'si 1700 olan tüm departmanların departman
 ID'sini, departman adını ve yönetici ID'sini getirin.
 
