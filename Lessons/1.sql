@@ -30,7 +30,7 @@ alter table hr.ilktablo modify (sehir_adi VARCHAR2 (30) not NULL)
 
 truncate table ilktablo
 
-
+-----------------------------------------------------------------------------------
 
 CTAS : Silinen tabloyu tekrardan getirme işlemi
 Create Table region_bckp as (Select * from regions)
@@ -38,7 +38,7 @@ Create Table region_bckp as (Select * from regions)
 select * from region_bckp
 
 
-//Tablonun içi boş olunacak   veri olmayacak.
+--Tablonun içi boş olunacak veri olmayacak --
 
 (Select * from regions where region_id = 0)
 (Select * from regions where region_id = null)
@@ -58,7 +58,7 @@ CREATE table hr.ilktablo(
        plaka_kodu NUMBER (5,2) Not Null,
 )
   5,2->(123,45 kullanım)
-
+---------------------------------------------------------------------------------------------
 
 5-INSERT INTO: Veri Ekleme
 
@@ -67,7 +67,7 @@ insert into hr.ilktablo(plaka_kodu ,sehir_adi, bolge) values (123.35 , 'Istanbul
 SELECT * FROM hr.ilktablo 
 
 
-
+------------------------------------------------------------------------------------------------
 DUAL :Oracle sistem tablosu .Matematiksel islem yapılabilir.
 
 
