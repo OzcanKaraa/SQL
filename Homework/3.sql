@@ -48,17 +48,19 @@ sonuç kümesi döndürün. Sonuçları maaş sırasına göre azalan
 10- Departman adı, ortalama maaş ve çalışan sayısı içeren bir
 sonuç kümesi döndürün. Sadece ortalama maaşı 5000'den büyük
 olan departmanları gösterin.
+
+
 11-- Calisanlar icinde sadece yonetici posizyonunda olanlarin
 isimlerini, soyisimlerini ve JOB Title larini gosteren bi
 query yazin. Sonuclari her kayittan sadece 1 tane olacak
 sekilde ve isim e gore A dan Z ye siralanmis haliyle gosterin.
 
-11-Tum calisanlari kullanarak her yil ise alinan
+12-Tum calisanlari kullanarak her yil ise alinan
 çalışanların sayısını ve o yil ise alinan kisi sayisinin
 toplam calisan sayisina karsin yüzdesini hesaplayın
 
 
-12- Tum calisanlarin isim , soy isim, departman isimleri ve
+13- Tum calisanlarin isim , soy isim, departman isimleri ve
 ise baslayip isi biraktiklari tarihleri gosterin. Eger Ise
 baslama ve bitis tarihi yoksa bu kayitlari sonuc listesinden
 cikarin.
