@@ -53,12 +53,12 @@ isimlerini, soyisimlerini ve JOB Title larini gosteren bi
 query yazin. Sonuclari her kayittan sadece 1 tane olacak
 sekilde ve isim e gore A dan Z ye siralanmis haliyle gosterin.
 
-12-Tum calisanlari kullanarak her yil ise alinan
+11-Tum calisanlari kullanarak her yil ise alinan
 çalışanların sayısını ve o yil ise alinan kisi sayisinin
 toplam calisan sayisina karsin yüzdesini hesaplayın
 
 
-13- Tum calisanlarin isim , soy isim, departman isimleri ve
+12- Tum calisanlarin isim , soy isim, departman isimleri ve
 ise baslayip isi biraktiklari tarihleri gosterin. Eger Ise
 baslama ve bitis tarihi yoksa bu kayitlari sonuc listesinden
 cikarin.
