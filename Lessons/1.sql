@@ -1,5 +1,15 @@
 /* 31.05.2023  */
 
+ Data Manipulation Language( DML) /Data Manipulasyon Komutlari:
+ RDMS Objeleri uzerinde yapilan islemler 
+=> Select ,Insert ,Update,Delete , Truncate
+
+
+Data Definition Language (DDL) / VeriTabani Manipulasyon Komutlari:
+Veriler uzerinde yapilan islemler 
+=> Create ,Alter ,Drop,Truncate
+-------------------------------------------------------------------------------
+
 1- CREATE : Tablo olusturma
 
 CREATE table hr.ilktablo(
