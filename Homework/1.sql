@@ -3,7 +3,7 @@
 1- Employees tablosundaki iş unvanı 'Programcı' olan tüm çalışanların çalışan ID'sini,
 adını ve soyadını getirin.
 
-=>  Select Employee_ID, First_Name ,Last_Name from hr.Employee Where  Job_ID =IT_PROG
+=>  Select Employee_ID, First_Name ,Last_Name ,Job_ID from employees e Where  Job_ID ='IT_PROG'
 
 
 2-Departments tablosundaki konum ID'si 1700 olan tüm departmanların departman
