@@ -3,11 +3,15 @@
  Data Manipulation Language( DML) /Data Manipulasyon Komutlari:
  RDMS Objeleri uzerinde yapilan islemler 
 => Select ,Insert ,Update,Delete , Truncate
-
-
+-------------------------------------------------------------------------------
 Data Definition Language (DDL) / VeriTabani Manipulasyon Komutlari:
 Veriler uzerinde yapilan islemler 
 => Create ,Alter ,Drop,Truncate
+-------------------------------------------------------------------------------
+İlişkisel Veri Tabanı (RDMS):
+Tekrar eden verileri tekillestirmek amaci ile yapilandirilan veritabani sistemleridir.
+
+SORU1: DDL- DML arasindaki fark Nedir?? 
 -------------------------------------------------------------------------------
 
 1- CREATE : Tablo olusturma
