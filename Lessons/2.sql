@@ -42,3 +42,26 @@ select substr(hire_date ,8,2) as HIRE_DATE  from Employees
 15-
 select 'Hello World!' ,Substr('Hello World!',1,7) AS ilkelime from DUAL 
 
+
+
+Select * from hr.EMPLOYEES
+
+Select Employee_ID, First_Name ,Last_Name from hr.Employee Where  Job_ID =IT_PROG
+
+
+Select * from hr.Jobs
+Select Count(First_Name) from Employees
+
+
+
+create user test_user identified by 
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,8 @@ Veriler uzerinde yapilan islemler
 Tekrar eden verileri tekillestirmek amaci ile yapilandirilan veritabani sistemleridir.
 
 SORU1: DDL- DML arasindaki fark Nedir?? 
+
+
 -------------------------------------------------------------------------------
 
 1- CREATE : Tablo olusturma
@@ -105,3 +107,5 @@ SELECT SUBSTR('31/05/2023',2,3) AS Sonuc ,TO_CHAR(To_Date('31/05/2023','DD/MM/YY
 
 -- select --
 SELECT plaka_kodu as plk_kd , bolge as blg ,A.* FROM hr.ilktablo a
+
+--------------------------------------------------------------------------------------------------------------
