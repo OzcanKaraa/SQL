@@ -3,13 +3,13 @@
 1- Employees tablosundaki iş unvanı 'Programcı' olan tüm çalışanların çalışan ID'sini,
 adını ve soyadını getirin.
 
-=>  Select Employee_ID, First_Name ,Last_Name ,Job_ID from employees e Where  Job_ID ='IT_PROG'
+=> Select Employee_ID, First_Name ,Last_Name ,Job_ID from employees e Where  Job_ID = 'IT_PROG'
 
 
 2-Departments tablosundaki konum ID'si 1700 olan tüm departmanların departman
 ID'sini, departman adını ve yönetici ID'sini getirin.
 
-=>Select Departments_ID, Departments_Name ,MANAGER_ID from hr.Departments Where  Location_ID =1700
+=> Select * from departments d  Where  Location_ID =1700
 
 3-Jobs tablosundaki maksimum maaşı $10,000'den büyük olan işlerin iş ID'sini, iş
 unvanını ve maksimum maaşı getirin
