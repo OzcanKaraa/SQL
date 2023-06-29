@@ -9,11 +9,11 @@ adını ve soyadını getirin.
 2-Departments tablosundaki konum ID'si 1700 olan tüm departmanların departman
 ID'sini, departman adını ve yönetici ID'sini getirin.
 
-=> Select * from departments d  Where  Location_ID =1700
+=> Select * from departments   Where  Location_ID =1700
 
 3-Jobs tablosundaki maksimum maaşı $10,000'den büyük olan işlerin iş ID'sini, iş
 unvanını ve maksimum maaşı getirin
-=>Select Job_Title,Max_Salary from hr.JOBS Where  Max_Salary >$10,000 
+=> Select job_id ,job_title ,max_salary  from jobs where max_salary > 10.000
 
 
 DIKKAT! : Asagidaki sogulari yazmadan once CTAS kullanarak tablolarin back up ini olusturup
@@ -24,10 +24,15 @@ Alttaki Soru 4 icin Ornek : create table employees_bckp as ( select * from
 hr.employees) dedikten sonra employees_bckp tablsounda sutun adi degistirme islemini
 yapin.
 
+create table departments_bckp as ( select * from
+departments )
+
+create table employees_bckp as ( select * from
+employees
 
 
 4- "employees" tablosundaki "job_id" sütununun adını "position_id" olarak değiştirin.
-=>
+=> alter tablo 
 
 5- "employees" tablosundaki "salary" sütununun veri tipini NUMBER(10, 2)'den
 NUMBER(12, 2)'ye değiştirin.

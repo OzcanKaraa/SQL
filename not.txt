@@ -1,0 +1,7 @@
+Oracle Database Conection Tools
+
+	Toad
+	Pl/Sql Developer
+	SqlCl
+	SqlPlus
+	Sql Developer

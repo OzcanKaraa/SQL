@@ -30,13 +30,10 @@ CREATE table hr.ilktablo(
        bolge char (1)
 )
 ---------------------------------------------------------------------------------
-
 2-DROP: :Tüm tabloyu Silme islemi 
 drop TABLE hr.ilktablo   
 
 ----------------------------------------------------------------------------------
-
-
 3-ALTER  :  Tabloyu degistirme
 
 alter table hr.ilktablo modify (sehir_adi VARCHAR2 (30) not NULL)
