@@ -170,11 +170,9 @@ yazdıran bir sorgu yazın.
 karakterini ayni satir uzerinde "Merhaba, Dünya!" yazinin yaninda ilkkelime kolonunda
 gosteriniz.
 
+
+Select Substr('Hello World!',1,7) AS ilkelime from DUAL 
 Select 'Hello World!' ,Substr('Hello World!',1,7) AS ilkelime from DUAL 
-Select * from hr.EMPLOYEES
-Select Employee_ID, First_Name ,Last_Name from hr.Employee Where  Job_ID =IT_PROG
-Select * from hr.Jobs
-Select Count(First_Name) from Employees
 
 ------------------------------------------------------------------------------------------------------------------
 
