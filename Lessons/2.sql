@@ -7,7 +7,7 @@ TEK  DEGERLI FONKSIYONLAR (Single-Row Functions):
 
 1- Sayisal Fonksiyonlar:
 --------------------------
-Trim : ýlk-son bosluklari temizler
+Trim : Bastaki-Sondaki bosluklari temizler
 Power : Üs alma 
 ABS : Mutlak deger
 CEIL : Yukarý Yuvarlama (Tavan)
