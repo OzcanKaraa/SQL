@@ -12,7 +12,7 @@ Power : Üs alma
 ABS : Mutlak deger
 CEIL : Yukarý Yuvarlama (Tavan)
 Floor : Aþaðý Yuvarlama (Taban)
-Round :  4>3,50>3 
+Round :  4>3,50>3 yuvarlama
 
 => select Power(2,2) from dual  //4 
 => select Power(2,2) as Sonuc from dual   //Sonuç : 4
@@ -36,4 +36,24 @@ round_sonuc2 => 4
 Hata : `column ambiguousily defined` //1 sutundan birden fazla var.
 ----------------------------------------------------------------------------------------------------------
 
+2-Metinsel Fonksiyonlar :
 
+LTRIM:
+Concat:Sutunlarý birleþtirme.
+RPAD: String sagina  0 ekle
+LPAD: String soluna 0 ekle
+
+
+//CONCAT Kullanýmý :
+select first_name , last_name ,CONCAT(first_name ,' ', last_name ) as ISIM_SOYISIM from ozcan.employees  
+
+
+//RPAD Kullanýmý :
+select first_name , last_name ,rpad(first_name,6,'0')  as ISIM_SOYISIM from ozcan.employees //6 karakter olana kadar sagina 0 ekle
+
+LPAD Kullanýmý :
+select first_name , last_name ,lpad(first_name,6,'0')  as ISIM_SOYISIM from ozcan.employees //6 karakter olana kadar soluna 0 ekle
+
+select first_name , last_name ,lpad(1,4,'0')  from ozcan.employees  // sola 1.karakter 4 karakter olana kadar basina 0 ekle
+
+select first_name , last_name ,rpad(1,4,'0')  from ozcan.employees  // sagýna 1.karakter 4 karakter olana kadar basina 0 ekle
