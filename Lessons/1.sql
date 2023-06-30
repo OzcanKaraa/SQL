@@ -83,18 +83,21 @@ SELECT * FROM hr.ilktablo
 ------------------------------------------------------------------------------------------------
 DUAL :Oracle sistem tablosu .Matematiksel islem yapılabilir.
 
-
 SELECT  123  FROM DUAL 
 SELECT  123 + 12  FROM DUAL  
 select (360+35) AS Sonuc from DUAL
 
 SELECT '31/05/2023' AS Sonuc ,To_Date('31/05/2023','DD/MM/YYYY') AS Sonuc_Date from DUAL
-
 SELECT '31/05/2023' AS Sonuc ,To_Timestamp('31/05/2023','DD/MM/YYYY') AS Sonuc_Date from DUAL
-
 SELECT '31/05/2023' AS Sonuc ,SUBSTR(To_Date('31/05/2023','DD/MM/YYYY'),1,9) AS Sonuc_Date from DUAL
+Select To_Char(To_Date)('24-MAR-1980','DD-MON-YYYY'),'DAY'from DUAL
 
-
+Select 4*4 z "Sonuç" from dual 
+Select * from dual;
+desc dual;
+Select sysdate from dual 
+Select user from dual
+--------------------------------------------------------------------------------------------------------------------------------------
 --SONUC 1/0  SONUC_DATE 31/05/2023 --
 SELECT SUBSTR('31/05/2023',2,3) AS Sonuc ,TO_CHAR(To_Date('31/05/2023','DD/MM/YYYY'),'DD/MM/YYYY') AS Sonuc_Date from DUAL
 
