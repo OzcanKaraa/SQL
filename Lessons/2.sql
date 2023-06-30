@@ -1,57 +1,39 @@
 /* 02.06.2023  */
 
-Distinct: Tekrarli olanlardan sadece birini gosterme
-Primary key olan kayitlar distinc ile yapilsa da tek kayit olarak gelecektir.Tekrar edemez.
+Distinct: Tekrarli olanlardan sadece birini gosterme.
+** Primary key olan kayitlar distinc ile yapilsa da tek kayit olarak gelecektir.Tekrar edemez.
 ---------------------------------------------------------------------------------------------
-1-
-Select distinct job_id,salary from Employees
-Select Count(*) from Employees
-Select Count(First_Name) from Employees
+TEK  DEGERLI FONKSIYONLAR (Single-Row Functions):
 
-Select distinct First_Name,Last_Name from Employees
+1- Sayisal Fonksiyonlar:
+--------------------------
+Trim : ılk-son bosluklari temizler
+Power : Üs alma 
+ABS : Mutlak deger
+CEIL : Yukarı Yuvarlama (Tavan)
+Floor : Aşağı Yuvarlama (Taban)
+Round :  4>3,50>3 
 
-----------------------------------------------------------------------------------------------
-7-create user test_user identified by 123456  
-ile tablo sifre olusturma
+=> select Power(2,2) from dual  //4 
+=> select Power(2,2) as Sonuc from dual   //Sonuç : 4
 
+=>select 
+Power(2,5) as pwr_sonuc ,    
+ABS(-22) as abs_sonuc ,      2
+ceil(3.23) as ceil_sonuc ,    
+floor(3.23) as floor_somuc ,  
+Round(3.23) as round_sonuc ,  
+Round(3.55) as round_sonuc2  
+from dual
 
-----------------------------------------------------------------------------------------------
-10- "employees" tablosunda yer alan "hire_date" adlı tarih sütunundaki yılların sadece son
-iki hanesini alarak yeni bir table ve sütuna kaydeden bir CTAS sorgusu oluşturun.
-
-select hire_date ,substr(hire_date ,8,2),substr(hire_date ,1,50) from Employees
-
-
-Create table employees_bckp as select substr(hire_date ,8,2) as HIRE_DATE  from Employees
-
-select * from  employees_bckp 
-
-select to_char(hire_date)  from Employees
-
-
-select to_char(hire_date,'DD/MM/YYYY')  from Employees
-
-select hire_date to_char(hire_date,'MM')  from Employees
-select hire_date to_char(hire_date,'MM')  from AS AYLAR Employees AS CALISANLAR
-
-select substr(hire_date ,8,2) as HIRE_DATE  from Employees
-
---------------------------------------------------------------------------------------------
-15-
-select 'Hello World!' ,Substr('Hello World!',1,7) AS ilkelime from DUAL 
-Select * from hr.EMPLOYEES
-Select Employee_ID, First_Name ,Last_Name from hr.Employee Where  Job_ID =IT_PROG
-Select * from hr.Jobs
-Select Count(First_Name) from Employees
-
-create user test_user identified by 1234567
-
-
-
-
-
-
-
-
+Çıktı : 
+pwr_sonuc => 32
+abs_sonuc => 22
+ceil_sonuc => 4
+floor_somuc => 3
+round_sonuc => 3
+round_sonuc2 => 4
+Hata : `column ambiguousily defined` //1 sutundan birden fazla var.
+----------------------------------------------------------------------------------------------------------
 
 

@@ -4,7 +4,9 @@
 adını ve soyadını getirin.
 
 => Select Employee_ID, First_Name ,Last_Name ,Job_ID from employees e Where  Job_ID = 'IT_PROG'
-
+Select Count(*) from Employees
+Select Count(First_Name) from Employees
+Select distinct First_Name,Last_Name from Employees
 ------------------------------------------------------------------------------------------------------------------
 2-Departments tablosundaki konum ID'si 1700 olan tüm departmanların departman
 ID'sini, departman adını ve yönetici ID'sini getirin.
@@ -63,7 +65,8 @@ kullanıcısına verin.
 ⦁ Yeni bir sekmede test_user ile login olmayi deneyip employees de select ve
 insert yapip yapamadiginizi test edin.
 
-=> 
+=> create user test_user identified by 123456  ile tablo sifre olusturma
+
 
 ------------------------------------------------------------------------------------------------------------------
 8-"employees" tablosunda "salary" sütunundaki INSERT iznini "test_user" kullanıcısından
