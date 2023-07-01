@@ -27,9 +27,8 @@ tane "0" ekleyin (Ipucu Length ve LPAD fonksiyonlarini kullanin)
 5-employees tablosundaki "email" sütununa her email icin "@gmail com"
 ifadesini ekleyiniz
 
-=> ****  select email, rpad(email ,25,'gmail.com')  from ozcan.employees
+=>select email, trim(rpad(email ,20,'@gmail.com      '))  as New_Email from employees
  
-
 6-employees tablosundaki "hire_date" sütununda yer alan tarihleri "DD-MON-YY"
 formatında listeleyin
 

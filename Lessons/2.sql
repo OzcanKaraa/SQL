@@ -26,7 +26,7 @@ Round(3.23) as round_sonuc ,
 Round(3.55) as round_sonuc2  
 from dual
 
-Çýktý : 
+ÇIKTI : 
 pwr_sonuc => 32
 abs_sonuc => 22
 ceil_sonuc => 4
@@ -68,7 +68,7 @@ Substring :  Stringin belli karakteri bölmeyi parçalamayý saðlar
 select substring('Ozcan Kara',1,6)  ->//Ozcan (1.karakterden 6 karakter al) 
 select substring('Ozcan Kara',5,9) -> // n Kara
 --------------------------------------------------------------------------------------------------------------------------------------
-ÝÇ ÝÇE SQL SORGULAR :
+IÇ IÇE SQL SORGULAR :
 --------------------------
 Reverse : Tersine çevirme
 Initcap: Ilk harfi büyük harfe dönüþtürme
