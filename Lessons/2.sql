@@ -37,7 +37,7 @@ Hata : `column ambiguousily defined` //1 sutundan birden fazla var.
 --------------------------------------------------------------------------------------------------------------------------------------
 2-Metinsel Fonksiyonlar :
 ---------------------------
-Trim : Sagdaki-Soldaki bosluklari temizler.
+Trim :Sagdaki-Soldaki bosluklari temizler.
 LTRIM:Sol taraftaki boþluklarý temizler
 RTRIM:Sol taraftaki boþluklarý temizler
 Concat:Sutunlarý birleþtirme.
