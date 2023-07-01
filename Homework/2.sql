@@ -31,7 +31,7 @@ ifadesini ekleyiniz
 6-employees tablosundaki "hire_date" sütununda yer alan tarihleri "DD-MON-YY"
 formatında listeleyin
 
-=> 
+=> select hire_date, to_char(hire_date,'DD-MON-YY')  as new_hireDate from employees 
 --------------------------------------------------------------------------------------------------------------------------------------
 7-employees tablosundaki "first_name" sütunundaki ilk üç karakteri alın
 
@@ -54,25 +54,25 @@ dönüştürülmüş halini listeleyin
 =>  select  upper(last_name)  as sonuc_buyuk  from employees 
 =>  select  lower(last_name)  as sonuc_kucuk  from employees 
 --------------------------------------------------------------------------------------------------------------------------------------
-11- employees tablosundaki çalışanların işe alındığı tarihten itibaren geçen ay sayısını
+***11- employees tablosundaki çalışanların işe alındığı tarihten itibaren geçen ay sayısını
 bulun
 
-=> 
+=>  ******?? SELECT HireDate, DATEDIFF(MONTH,'HireDate',GETDATE()) from Employees
 --------------------------------------------------------------------------------------------------------------------------------------
-12- employees tablosundaki çalışanların işe alındığı tarihten itibaren geçen gün sayısını
+***12- employees tablosundaki çalışanların işe alındığı tarihten itibaren geçen gün sayısını
 bulun
 
-=>
+=>  ******?? SELECT HireDate, DATEDIFF(DAY,'HireDate',GETDATE()) from Employees
 
 --------------------------------------------------------------------------------------------------------------------------------------
-13-employees tablosundaki çalışanların doğum tarihlerine göre yaşlarını bulun
+****13-employees tablosundaki çalışanların doğum tarihlerine göre yaşlarını bulun
 
-=>
+=> *****?? Select BirthDate , DATEDIFF(MONTH,'BirthDate',GETDATE()) from Employees
 --------------------------------------------------------------------------------------------------------------------------------------
 14-employees tablosundaki çalışanların doğum tarihlerini ve haftanın hangi gününde
 doğduklarını bulun
 
-=>
+=> ???????
 --------------------------------------------------------------------------------------------------------------------------------------
 15- employees tablosundaki çalışanların maaşlarının ortalama değerini bulun
 
@@ -89,8 +89,5 @@ doğduklarını bulun
     "employees_bckp" tablosunda yer alan JOB_ID=
    IT_PROG çalışanların maaşlarını 500 artirin (Ipucu Update statement)
 
-=>
-
-
-
+=> UPDATE employees_bckp  set salary = salary + 500 where JOB_ID='IT_PROG'
 --------------------------------------------------------------------------------------------------------------------------------------
