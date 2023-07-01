@@ -24,7 +24,7 @@ tane "0" ekleyin (Ipucu Length ve LPAD fonksiyonlarini kullanin)
 5-employees tablosundaki "email" sütununa her email icin "@gmail com"
 ifadesini ekleyiniz
 
-=>
+=>  
 
 
 6-employees tablosundaki "hire_date" sütununda yer alan tarihleri "DD-MON-YY"
@@ -50,7 +50,7 @@ listeleyin
 dönüştürülmüş halini listeleyin
 
 => select  upper(last_name)  as sonuc_buyuk  from employees 
-=>select  lower(last_name)  as sonuc_kucuk  from employees 
+=> select  lower(last_name)  as sonuc_kucuk  from employees 
 
 
 11- employees tablosundaki çalışanların işe alındığı tarihten itibaren geçen ay sayısını
