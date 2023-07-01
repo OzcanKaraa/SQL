@@ -3,19 +3,17 @@
  Data Manipulation Language( DML) /Data Manipulasyon Komutlari:
  RDMS Objeleri uzerinde yapilan islemler 
 => Select ,Insert ,Update,Delete , Truncate
--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 Data Definition Language (DDL) / VeriTabani Manipulasyon Komutlari:
 Veriler uzerinde yapilan islemler 
 => Create ,Alter ,Drop,Truncate
--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 İlişkisel Veri Tabanı (RDMS):
 Tekrar eden verileri tekillestirmek amaci ile yapilandirilan veritabani sistemleridir.
-
+--------------------------------------------------------------------------------------------------------------------------------------
 SORU1: DDL- DML arasindaki fark Nedir?? 
 
-
--------------------------------------------------------------------------------
-
+--------------------------------------------------------------------------------------------------------------------------------------
 1- CREATE : Tablo olusturma
 
 CREATE table hr.ilktablo(
@@ -29,11 +27,12 @@ CREATE table hr.ilktablo(
        sehir_adi VARCHAR2(50),
        bolge char (1)
 )
----------------------------------------------------------------------------------
-2-DROP: :Tüm tabloyu Silme islemi 
-drop TABLE hr.ilktablo   
+--------------------------------------------------------------------------------------------------------------------------------------
+2-DROP: :Tüm Tabloyu Verileri Silme islemi
 
-----------------------------------------------------------------------------------
+drop TABLE hr.ilktablo   
+drop table employees_bckp  
+--------------------------------------------------------------------------------------------------------------------------------------
 3-ALTER  :  Tabloyu degistirme
 
 alter table hr.ilktablo modify (sehir_adi VARCHAR2 (30) not NULL)
@@ -44,34 +43,23 @@ alter table hr.ilktablo modify (sehir_adi VARCHAR2 (30) not NULL)
 truncate table ilktablo
 
 -----------------------------------------------------------------------------------
-
 CTAS : Silinen tabloyu tekrardan getirme işlemi
-Create Table region_bckp as (Select * from regions)
 
-select * from region_bckp
-
+Create Table region_bckp as (Select * from regions) //region tablosu
+Create Table employees_bckp as (Select * from employees) employees tablosu
 
 --Tablonun içi boş olunacak veri olmayacak --
-
 (Select * from regions where region_id = 0)
 (Select * from regions where region_id = null)
 (Select * from regions where 1 = 0)
-
-
 (Select * from regions where region_id = 1) // 1.id gelecek
-
-
-drop table region_bckp2 
-Varchar (Varİable Char)
-
-
-
+--------------------------------------------------------------------------------------------------------------------------------------
 --Number tipi--
 CREATE table hr.ilktablo(
        plaka_kodu NUMBER (5,2) Not Null,
 )
   5,2->(123,45 kullanım)
----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 
 5-INSERT INTO: Veri Ekleme
 
@@ -80,7 +68,7 @@ insert into hr.ilktablo(plaka_kodu ,sehir_adi, bolge) values (123.35 , 'Istanbul
 SELECT * FROM hr.ilktablo 
 
 
-------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 DUAL :Oracle sistem tablosu .Matematiksel islem yapılabilir.
 
 SELECT  123  FROM DUAL 
@@ -108,4 +96,4 @@ SELECT SUBSTR('31/05/2023',2,3) AS Sonuc ,TO_CHAR(To_Date('31/05/2023','DD/MM/YY
 -- select --
 SELECT plaka_kodu as plk_kd , bolge as blg ,A.* FROM hr.ilktablo a
 
---------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------

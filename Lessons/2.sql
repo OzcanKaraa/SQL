@@ -2,12 +2,12 @@
 
 Distinct: Tekrarli olanlardan sadece birini gosterme.
 ** Primary key olan kayitlar distinc ile yapilsa da tek kayit olarak gelecektir.Tekrar edemez.
----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 TEK  DEGERLI FONKSIYONLAR (Single-Row Functions):
--------------------------------------------------------
+-------------------------------------------------
 
 1- Sayisal Fonksiyonlar:
---------------------------
+------------------------
 Power : Üs alma 
 ABS : Mutlak deger
 CEIL : Yukarý Yuvarlama (Tavan)
@@ -34,7 +34,7 @@ floor_somuc => 3
 round_sonuc => 3
 round_sonuc2 => 4
 Hata : `column ambiguousily defined` //1 sutundan birden fazla var.
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 2-Metinsel Fonksiyonlar :
 ---------------------------
 Trim : Sagdaki-Soldaki bosluklari temizler.
@@ -45,10 +45,10 @@ RPAD: String sagina  0 ekle
 LPAD: String soluna 0 ekle
 UPPER : Büyük harfe dönüþtürme
 LOWER : Küçük harfe dönüþtürme
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 CONCAT Kullanimi:
 select first_name , last_name ,CONCAT(first_name ,' ', last_name ) as ISIM_SOYISIM from employees  
------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 RPAD / LPAD Kullanýmý :
 
 select first_name , last_name ,rpad(first_name,6,'0')  as ISIM_SOYISIM from ozcan.employees //6 karakter olana kadar sagina 0 ekle
@@ -58,16 +58,16 @@ select first_name , last_name ,lpad(first_name,6,'0')  as ISIM_SOYISIM from ozca
 select first_name , last_name ,lpad(1,4,'0')  from employees  // sola 1.karakter 4 karakter olana kadar basina 0 ekle
 
 select first_name , last_name ,rpad(1,4,'0')  from employees  // sagýna 1.karakter 4 karakter olana kadar basina 0 ekle
--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 Trim /Ltrim / Rtrim Kullanýmý: 
 select first_name , last_name ,trim ('     sql      ')  from employees 
 select first_name , last_name ,ltrim ('     sql  ')  from employees 
 select first_name , last_name ,rtrim ('sql           ')  from employees 
--------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 Substring :  Stringin belli karakteri bölmeyi parçalamayý saðlar
 select substring('Ozcan Kara',1,6)  ->//Ozcan (1.karakterden 6 karakter al) 
 select substring('Ozcan Kara',5,9) -> // n Kara
-----------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 ÝÇ ÝÇE SQL SORGULAR :
 --------------------------
 Reverse : Tersine çevirme
@@ -79,7 +79,7 @@ select first_name , last_name ,reverse(substring (trim ('  Ozcan  '),1,3))   fro
 select first_name , last_name ,upper(reverse(substring (trim (' Ozcan    '),1,3)))   from employees  => CZO
 select first_name , last_name ,Initcap(reverse(substring (trim ('  Ozcan  '),1,3)))   from employees  => Czo
 select trunc(3.55)  => 3
------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 3- Tarihsel Fonksiyonlar :
 ---------------------------
 Add_Months: Ay ekleme.
@@ -104,7 +104,7 @@ select hire_date,add_months(hire_date,2),last_day(hire_date),months_between(hire
 select hire_date,add_months(hire_date,2),last_day(hire_date),trunc(abs(months_between(hire_date,sysdate))))  from employees 
 
 select hire_date,add_months(hire_date,2),last_day(hire_date),round(abs(months_between(hire_date,sysdate))))  from employees 
--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 
 Replace : Karakter Deðiþtirme
 
@@ -112,7 +112,7 @@ select first_name , last_name ,replace(substring (trim ('  Sql Developer  '),1,1
 
 select first_name , last_name ,replace(substring (trim ('  Sql  Sql Sql Sql   '),1,100),' ' ,'') from employees //SqlSqlSqlSql
 
------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
 
