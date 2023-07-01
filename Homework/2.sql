@@ -16,17 +16,17 @@ sayısını bulun (Ipucu – Count ve INSRT fonksiyonlarini kullanin)
 3-employees tablosundaki "phone_number" sütunundaki tüm numaraların başına 1
 tane "0" ekleyin (Ipucu Length ve LPAD fonksiyonlarini kullanin)
 
-=> select   phone_number ,lpad(phone_number,13,'0')  from employees 
+=>  select   phone_number ,lpad(phone_number,13,'0')  from employees 
 --------------------------------------------------------------------------------------------------------------------------------------
 4-employees tablosundaki "email" sütununda geçen "gmail com" ifadesini
 "yahoo com" ile değiştirin
 
-=> select email ,replace(substring (trim ('  gmail.com  '),1,15),'gmail.com' ,'yahoo.com') as New_Email from employees
+=>  select email ,replace(substring (trim ('  gmail.com  '),1,15),'gmail.com' ,'yahoo.com') as New_Email from employees
 --------------------------------------------------------------------------------------------------------------------------------------
 5-employees tablosundaki "email" sütununa her email icin "@gmail com"
 ifadesini ekleyiniz
 
-=>select email, trim(rpad(email ,20,'@gmail.com      '))  as New_Email from employees
+=>  select email, trim(rpad(email ,20,'@gmail.com      '))  as New_Email from employees
  --------------------------------------------------------------------------------------------------------------------------------------
 6-employees tablosundaki "hire_date" sütununda yer alan tarihleri "DD-MON-YY"
 formatında listeleyin
@@ -35,24 +35,24 @@ formatında listeleyin
 --------------------------------------------------------------------------------------------------------------------------------------
 7-employees tablosundaki "first_name" sütunundaki ilk üç karakteri alın
 
-=> select  first_name ,substr( first_name,1,3) from employees 
-=>select  first_name ,substring ( first_name,1,3) from employees 
+=>  select  first_name ,substr( first_name,1,3) from employees 
+=>  select  first_name ,substring ( first_name,1,3) from employees 
 --------------------------------------------------------------------------------------------------------------------------------------
 8-employees tablosunda yer alan "job_id" sütununu ters çevirin
 
-=> select  reverse( job_id  ) from employees 
+=>  select  reverse( job_id  ) from employees 
 
 --------------------------------------------------------------------------------------------------------------------------------------
 9-employees tablosunda "job_id" sütununda "MAN" kelimesini içeren kayıtları
 listeleyin
 
-=> select job_id from employees where  job_id like 'MAN%'
+=>  select job_id from employees where  job_id like 'MAN%'
 --------------------------------------------------------------------------------------------------------------------------------------
 10-employees tablosundaki "last_name" sütunundaki harflerin büyük harfe
 dönüştürülmüş halini listeleyin
 
-=> select  upper(last_name)  as sonuc_buyuk  from employees 
-=> select  lower(last_name)  as sonuc_kucuk  from employees 
+=>  select  upper(last_name)  as sonuc_buyuk  from employees 
+=>  select  lower(last_name)  as sonuc_kucuk  from employees 
 --------------------------------------------------------------------------------------------------------------------------------------
 11- employees tablosundaki çalışanların işe alındığı tarihten itibaren geçen ay sayısını
 bulun
@@ -81,7 +81,7 @@ doğduklarını bulun
 --------------------------------------------------------------------------------------------------------------------------------------
 16-employees tablosundaki çalışanların maaşlarının 2 üzeri alın
 
-=> select salary, power(salary,2) as yeni_maas from  employees 
+=>  select salary, power(salary,2) as yeni_maas from  employees 
 
 --------------------------------------------------------------------------------------------------------------------------------------
 17- DIKKAT: Bu sorguyu backup aldiginiz bir tablo uzerinden calistirin 

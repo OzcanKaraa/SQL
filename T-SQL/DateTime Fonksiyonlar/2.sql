@@ -1,6 +1,5 @@
-Sistemin Anlik Tarih Saat bilgisini getiren fonksiyonlar
+ Sistemin Anlik Tarih Saat bilgisini getiren fonksiyonlar :
 --------------------------------------------------------
- 
 	Select 
 	GETDATE() GETDATE,                                     => 2023-07-01 21:14:07.850
 	SYSDATETIME() SYSDATETIME,							   => 2023-07-01 21:14:07.8527894
@@ -10,10 +9,9 @@ Sistemin Anlik Tarih Saat bilgisini getiren fonksiyonlar
 	GETUTCDATE()  GETUTCDATE                               => 2023-07-01 18:14:07.850
 
 --------------------------------------------------------------------------------------------------------------------------------------
-	DatePart Fonksiyonu :
+    DatePart Fonksiyonu : Tarih saat icerisinde belli bölümleri parçalama fonksiyonu
 ------------------------
-	Tarih saat icerisinde belli bölümleri parçalama fonksiyonu
-
+	
   Select 
 	DATEPART(Year,GETDATE()) YEAR_ ,                              
 	DATEPART(MONTH,GETDATE()) MONTH_ ,
@@ -26,7 +24,7 @@ Sistemin Anlik Tarih Saat bilgisini getiren fonksiyonlar
 
 
 
-  SET DATEFIRST 1 //Haftayi Pazartesinden baslatan komut
+   SET DATEFIRST 1 //Haftayi Pazartesinden baslatan komut
 
 	Select 
 	DATEPART(Year,'2023-07-01 22:51:43:489')YEAR_ ,                         => 2023
@@ -57,11 +55,11 @@ Sistemin Anlik Tarih Saat bilgisini getiren fonksiyonlar
 	DATENAME(WEEK,'2023-07-01 22:51:43:489')WEEK_ 
 
 --------------------------------------------------------------------------------------------------------------------------------------
-  SET LANGUAGE turkish                =>Sql Turkce diline cevirme
-  SET LANGUAGE english                =>//Sql Ingilizce diline cevirme
-  SET DATEFIRST 1                     =>Haftayi Pazartesinden baslatan komut
+   SET LANGUAGE turkish                =>Sql Turkce diline cevirme
+   SET LANGUAGE english                =>//Sql Ingilizce diline cevirme
+   SET DATEFIRST 1                     =>Haftayi Pazartesinden baslatan komut
  --------------------------------------------------------------------------------------------------------------------------------------
- DATE-TIMEFROMPARTS Fonksiyonlari :
+  DATE-TIMEFROMPARTS Fonksiyonlari :
 
     SELECT DATEFROMPARTS(2023,7,1)                           => 2023-07-01
 	SELECT DATETIMEFROMPARTS(2023,12,31,23,59,59,476)        => 2023-12-31 23:59:59.477
@@ -84,9 +82,28 @@ Sistemin Anlik Tarih Saat bilgisini getiren fonksiyonlar
    SELECT DATEDIFF(WEEK,'2000-03-15  23:49:34',GETDATE())   => 1215 HAFTA
 
  --------------------------------------------------------------------------------------------------------------------------------------
+  DATEADD : Tarihe Yil/Ay/Gun ekleme
 
+  SELECT DATEADD(YEAR,10,'2023-07-02')        =>2033-07-02 00:00:00.000 //10 YIL
+  SELECT DATEADD(MONTH,10,'2023-07-02')       =>2024-05-02 00:00:00.000 //10 AY
+  SELECT DATEADD(HOUR,10,'2023-07-02')        =>2023-07-02 10:00:00.000  //10 SAAT
+  SELECT DATEADD(MINUTE,10,'2023-07-02')      =>2023-07-02 00:10:00.000   //10 DAKIKA
 
+  SELECT DATEADD(MINUTE,10,DATEADD(MINUTE,10,'2023-07-02'))      => 2023-07-02 00:20:00.000
 
+  SELECT DATEADD(SECOND,55,DATEADD(MINUTE,10,DATEADD(MINUTE,10,'2023-07-02')))    =>2023-07-02 00:20:55.000
+
+  SELECT DATEADD(DAY,-10,'2023-07-02')     => (10 GUN CIKARMA)  2023-06-22 00:00:00.000
+
+--------------------------------------------------------------------------------------------------------------------------------------
+ IsDATE Fonksiyonu : Icine aldigi parametrenin tarih turunde olup olmadigi deger 1-0 SONUC dondurur
+ IsNull :  Icine aldigi parametrenin Null olup olmadigi deger 1-0 SONUC dondurur
+
+   SELECT ISDATE('2023-07-02')   => 1
+   SELECT ISDATE('2023-13-02')   => 0
+   SELECT ISDATE('2023-1A-02')   => 0
+   SELECT ISDATE('20231202')    => 1
+   --------------------------------------------------------------------------------------------------------------------------------------
 
 
     
