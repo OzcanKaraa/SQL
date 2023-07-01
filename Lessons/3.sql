@@ -1,4 +1,4 @@
-/* 07.06.2023  */
+/* 07.06.2023 6. */ 
 
 => Select hire_date , substring(cast(e.hire_date as Varchar),1,2) from employees e  
 

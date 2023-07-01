@@ -1,4 +1,4 @@
-/* 31.05.2023  */
+/* 31.05.2023  4.*/
 
  Data Manipulation Language( DML) /Data Manipulasyon Komutlari:
  RDMS Objeleri uzerinde yapilan islemler 

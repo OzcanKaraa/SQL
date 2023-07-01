@@ -1,4 +1,4 @@
-/* 02.06.2023  */
+/* 02.06.2023  5.*/
 
 Distinct: Tekrarli olanlardan sadece birini gosterme.
 ** Primary key olan kayitlar distinc ile yapilsa da tek kayit olarak gelecektir.Tekrar edemez.
