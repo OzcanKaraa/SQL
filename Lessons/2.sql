@@ -35,7 +35,6 @@ round_sonuc => 3
 round_sonuc2 => 4
 Hata : `column ambiguousily defined` //1 sutundan birden fazla var.
 ----------------------------------------------------------------------------------------------------------
-
 2-Metinsel Fonksiyonlar :
 ---------------------------
 Trim : Sagdaki-Soldaki bosluklari temizler.
@@ -46,11 +45,10 @@ RPAD: String sagina  0 ekle
 LPAD: String soluna 0 ekle
 UPPER : Büyük harfe dönüþtürme
 LOWER : Küçük harfe dönüþtürme
-
-CONCAT Kullanýmý :
-
+-----------------------------------------------------------------------------------------------------------
+CONCAT Kullanimi:
 select first_name , last_name ,CONCAT(first_name ,' ', last_name ) as ISIM_SOYISIM from employees  
----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 RPAD / LPAD Kullanýmý :
 
 select first_name , last_name ,rpad(first_name,6,'0')  as ISIM_SOYISIM from ozcan.employees //6 karakter olana kadar sagina 0 ekle

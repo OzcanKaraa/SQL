@@ -9,12 +9,16 @@ ifadesini kullanın.
 ( Ipucu With CTE ve CASE WHEN Ifadelerini Kullanarak
 Yaziniz)
 
+=>
+
 
 2-Çalışanların adlarını ve yöneticilerinin adlarını
 listeleyin. Yöneticisi olmayan çalışanlar için "Yönetici
 Bulunamadı" ifadesini kullanın.
 ( Ipucu With CTE ve CASE WHEN Ifadelerini
 Kullanarak Yaziniz)
+
+=>
 
 
 3-HR şemasındaki DEPARTMENTS tablosundaki departmanların
@@ -30,6 +34,9 @@ departman_etiketi kolonlar ile sonucu yukarida en son
 olusturdugunuz CTE den okuyun
 
 
+=>
+
+
 4- Bir çalışanın maaşinin calistigi departmanin ortalamsindan
 ne kadar fazla oldugunu donduren bir fonksiyon yaziniz.
 Bu fonksiyon, employee ID yi input olarak alir, maasini
@@ -38,4 +45,8 @@ departman ortalamasindan cikarip numerik bir deger dondurur.
 querysi icinde cagirip employees tablosundaki her calisan icin
 employee_id, isim, soyisim, maas ve buldugunuz maas farki
 degerini gosteriniz.
+
+
+
+=>
 

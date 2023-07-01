@@ -27,15 +27,6 @@ END;
 $$
 LANGUAGE plpgsql;
 
-
-
-
-
-
-
-
-
-
 ---------------------------------------------------------------------------------------------------------------------------------
 3-) Bir Common Table Expression ile (CTE) her departmanýn ortalama maaþýný hesaplayin. Hesapladiginiz bu ortalama maasi CTE yi kullanarak departman ismi ve o departmanin managerinin ismi ile birlestirecek bir select uzerinden gosteriniz.
 
@@ -54,8 +45,8 @@ LANGUAGE plpgsql;
 
 
 
----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 5-) Employees tablosunda first_name ve last_name sütunlarýna göre bir composite indeks oluþturun.
 
 =>
----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
