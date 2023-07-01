@@ -9,7 +9,10 @@ last_name" formatında) listele
 2- employees tablosunda "last_name" sütununda boşluk karakteri olan çalışanların
 sayısını bulun (Ipucu – Count ve INSRT fonksiyonlarini kullanin)
 
-=> *** select  count(last_name) as sonuc from employees 
+=> select  count(INSTR(last_name,' ')) from employees 
+=> select count(*) as bosluk from employees where last_name like '% %'
+=> select count(position (' ' in last_name)) from employees where last_name like '% %'
+=>  select last_name  as bosluk from employees where last_name like '% %'
 
 3-employees tablosundaki "phone_number" sütunundaki tüm numaraların başına 1
 tane "0" ekleyin (Ipucu Length ve LPAD fonksiyonlarini kullanin)
@@ -35,6 +38,7 @@ formatında listeleyin
 7-employees tablosundaki "first_name" sütunundaki ilk üç karakteri alın
 
 => select  first_name ,substr( first_name,1,3) from employees 
+=>select  first_name ,substring ( first_name,1,3) from employees 
 
 8-employees tablosunda yer alan "job_id" sütununu ters çevirin
 
@@ -44,7 +48,7 @@ formatında listeleyin
 9-employees tablosunda "job_id" sütununda "MAN" kelimesini içeren kayıtları
 listeleyin
 
-=>
+=> 
 
 10-employees tablosundaki "last_name" sütunundaki harflerin büyük harfe
 dönüştürülmüş halini listeleyin
@@ -83,8 +87,9 @@ doğduklarını bulun
 => select salary, power(salary,2) as yeni_maas from  employees 
 
 
-17- DIKKAT: Bu sorguyu backup aldiginiz bir tablo uzerinden calistirin Soru:
-Yarattiginiz yeni tablo olan (CTAS ile) "employees_yedek" tablosunda yer alan JOB_ID=
-IT_PROG çalışanların maaşlarını 500 artirin (Ipucu Update statement)
+17- DIKKAT: Bu sorguyu backup aldiginiz bir tablo uzerinden calistirin 
+    Soru:Yarattiginiz yeni tablo olan (CTAS ile) 
+    "employees_bckp" tablosunda yer alan JOB_ID=
+   IT_PROG çalışanların maaşlarını 500 artirin (Ipucu Update statement)
 
 =>
