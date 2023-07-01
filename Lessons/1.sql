@@ -37,12 +37,12 @@ drop table employees_bckp
 
 alter table hr.ilktablo modify (sehir_adi VARCHAR2 (30) not NULL)
 
------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 4-TRUNCATE :  database kalır sadece tabloların tümünü siler.
 
 truncate table ilktablo
 
------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 CTAS : Silinen tabloyu tekrardan getirme işlemi
 
 Create Table region_bckp as (Select * from regions) //region tablosu
