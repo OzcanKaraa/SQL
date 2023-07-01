@@ -72,7 +72,7 @@ IÇ IÇE SQL SORGULAR :
 --------------------------
 Reverse : Tersine çevirme
 Initcap: Ilk harfi büyük harfe dönüþtürme
-TRUNC: Ondalikli sayida küsüratý siler.
+TRUNC: Ondalikli sayida küsürati siler.
 
 select first_name , last_name ,substring (trim ('  Ozcan '),1,3)  from employees  //Ilk 3 karakteri => Ozc
 select first_name , last_name ,reverse(substring (trim ('  Ozcan  '),1,3))   from employees          => Czo
