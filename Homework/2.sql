@@ -22,7 +22,7 @@ tane "0" ekleyin (Ipucu Length ve LPAD fonksiyonlarini kullanin)
 4-employees tablosundaki "email" sütununda geçen "gmail com" ifadesini
 "yahoo com" ile değiştirin
 
-=> select email ,replace(substring (trim ('  gmailcom  '),1,15),'gmailcom' ,'yahoocom') from employees
+=> select email ,replace(substring (trim ('  gmail.com  '),1,15),'gmail.com' ,'yahoo.com') as New_Email from employees
 
 5-employees tablosundaki "email" sütununa her email icin "@gmail com"
 ifadesini ekleyiniz
