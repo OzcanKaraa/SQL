@@ -15,7 +15,7 @@ SORU1: DDL- DML arasindaki fark Nedir??
 
 --------------------------------------------------------------------------------------------------------------------------------------
 1- CREATE : Tablo olusturma
-
+----------
 CREATE table hr.ilktablo(
     testKolonu NUMBER (5),
     isim VARCHAR2(50),
@@ -27,24 +27,25 @@ CREATE table hr.ilktablo(
        sehir_adi VARCHAR2(50),
        bolge char (1)
 )
+
+Create Any Table ()
 --------------------------------------------------------------------------------------------------------------------------------------
 2-DROP: :Tüm Tabloyu Verileri Silme islemi
-
+---------
 drop TABLE hr.ilktablo   
 drop table employees_bckp  
 --------------------------------------------------------------------------------------------------------------------------------------
 3-ALTER  :  Tabloyu degistirme
-
+---------
 alter table hr.ilktablo modify (sehir_adi VARCHAR2 (30) not NULL)
-
 --------------------------------------------------------------------------------------------------------------------------------------
 4-TRUNCATE :  database kalır sadece tabloların tümünü siler.
-
+-------------
 truncate table ilktablo
 
 --------------------------------------------------------------------------------------------------------------------------------------
 CTAS : Silinen tabloyu tekrardan getirme işlemi
-
+-----
 Create Table region_bckp as (Select * from regions) //region tablosu
 Create Table employees_bckp as (Select * from employees) employees tablosu
 
@@ -60,16 +61,12 @@ CREATE table hr.ilktablo(
 )
   5,2->(123,45 kullanım)
 --------------------------------------------------------------------------------------------------------------------------------------
-
 5-INSERT INTO: Veri Ekleme
-
+---------------------------
 insert into hr.ilktablo(plaka_kodu ,sehir_adi, bolge) values (123.35 , 'Istanbul' , 'AV' )
-
 SELECT * FROM hr.ilktablo 
-
-
 --------------------------------------------------------------------------------------------------------------------------------------
-DUAL :Oracle sistem tablosu .Matematiksel islem yapılabilir.
+DUAL :Oracle sistem tablosu .Sabit degerli, Matematiksel islem yapılabilir.
 
 SELECT  123  FROM DUAL 
 SELECT  123 + 12  FROM DUAL  
@@ -95,5 +92,21 @@ SELECT SUBSTR('31/05/2023',2,3) AS Sonuc ,TO_CHAR(To_Date('31/05/2023','DD/MM/YY
 
 -- SELECT ----------------------------------------------------------------------------------------------------------------------------
 SELECT plaka_kodu as plk_kd , bolge as blg ,A.* FROM hr.ilktablo a
-
+--------------------------------------------------------------------------------------------------------------------------------------
+Veri Tipi Donusumler (Data Type Conversions) :
+-------------------------------------------
+TO_CHAR   : Parametre olarak verilen degeri metinsel degere donusturme.Tarih/gun,ay,yil olarak da donusturulebilir.
+TO_NUMBER : Parametre olarak verilen degeri sayisal degere donusturme.
+TO_DATE   : Parametre olarak verilen degeri tarihsel degere donusturme.
+CAST      : Bir veri tipini donusume uygun baska bir veri tipine donusturmek icin kullanilir.
+--------------------------------------------------------------------------------------------------------------------------------------
+IN: Bir veya daha fazla degeri birlikte getirmek icin kullanilir.
+Between: Bir degerin 2 deger arasinda olup olmadigini gosterir.
+Like: Bir metnin icerisinde karakterler aramak icin kullanilir.
+Exist: ic Select sonucunda 1 den fazla sonuc donup donmedigini gosterme.
+Regexp_Like: Bir metnin icerisinde ifadeler aramak icin.
+--------------------------------------------------------------------------------------------------------------------------------------
+Metinsel Birlestirme Operatoru ( || ) :Birden fazla metinsel ifadeyi birlesttirme islemi. 
+Value   : Sabit Deger 
+Alias (AS) :Sadece sorguda gecerli takma isim verme.
 --------------------------------------------------------------------------------------------------------------------------------------

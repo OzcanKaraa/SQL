@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Homework",
-    "\\Lessons"
+    "\\Lessons",
+    "\\T-SQL",
+    "\\T-SQL\\DateTime Fonksiyonlar",
+    "\\T-SQL\\Oracle Sql"
   ],
-  "SelectedNode": "\\Join.png",
+  "SelectedNode": "\\Notes.txt",
   "PreviewInSolutionExplorer": false
 }
