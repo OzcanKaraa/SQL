@@ -1,13 +1,17 @@
+
 SQL (Structured query Language) :Yapilandirilmis Sorgu Dili
 PL/SQL (Prodecedural Language/SQL) : Oracle DB
 NoSQL (Not Only SQL) : Iliskisel olmayan veri tabani.Google BigTable,MongoDB,Cassandra,HBase
+
 --------------------------------------------------------------------------------------------------------------------------------------
 Oracle Database Conection Tools
+
 	Toad
 	Pl/Sql Developer
 	SqlCl
 	SqlPlus
 	Sql Developer
+
 --------------------------------------------------------------------------------------------------------------------------------------
 	DBA: VERI TABANI YONETICISI (DATABASE ADMINISTOR)
 	GRANT : Yetki verir.
@@ -15,4 +19,5 @@ Oracle Database Conection Tools
 	Schema Browser : Kullanici listesi.
 	SYS (SYSDBA) : Oracle DB en ust yetkili ve tum veri tabani yonetimi saglayan kullanicisi
 	SYSTEM : SYS kullanicisindan sonra en yetkili kullanici,normal DBA haklarina sahip.
+
 --------------------------------------------------------------------------------------------------------------------------------------
