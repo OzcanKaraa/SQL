@@ -1,0 +1,34 @@
+Derslerde Islediklerimiz :
+
+
+AMAZON AWS CLOUD DATABASE **** 
+
+DML DDL Nedir? Farklari Nelerdir??
+Create table
+Insert into 
+Update set
+Delete
+Alter table
+Truncate
+Select
+Alias (AS)
+CONVERT
+
+
+Dual *
+Distinct ** 
+Substring **
+
+Fonksiyon -1  (trim power ceil min max count)
+Fonksiyon -2  Tarih Saat 
+
+BETWEEN ***
+GROUP BY ***
+HAVING ***
+JOINLER *******
+
+
+
+
+
+
