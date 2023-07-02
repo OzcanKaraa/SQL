@@ -54,15 +54,40 @@ Max : Maximum ,Min:Minimum
 Group By:
 Having  :
 
+ --> Count
 select count(*) from employees 
 select count(1) from employees 
 select count(*) from employees where job_id = 'ST_MAN'
+select count(distinct job_id ) from employees     --> 19 job_id 
 
-select count(distinct job_id ) from employees                            --> 19 job_id 
+ --> Group by  
+select job_id , count(*) from employees   group by job_id                
+select job_id , count(*) from employees  where (salary between 6000 and 10000) group by job_id 
 
-select job_id , count(*) from employees   group by job_id                 -->Group by  
 
-select job_id , count(*) from employees  where (salary between 6000 and 10000) group by job_id
+--> Having ile  1 den buyuk olanlari gosterme 
+select job_id , count(*) from employees  
+	where (salary between 6000 and 10000)
+		group by job_id 
+			having count(*) > 1 
+
+--> Her departmanin ORTALAMA Maasi
+select department_id ,avg(salary)  from employees group by department_id 
+
+-->  Departmanin ortalama Maasi 5000 ustu
+=> select department_id ,avg(salary)  from employees  group by department_id having avg(salary) > 5000
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
