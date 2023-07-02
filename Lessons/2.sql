@@ -118,3 +118,4 @@ select first_name , last_name ,replace(substring (trim ('  Sql  Sql Sql Sql   ')
 
 
 
+

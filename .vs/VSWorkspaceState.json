@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Homework",
-    "\\Lessons"
+    "\\T-SQL",
+    "\\T-SQL\\DateTime Fonksiyonlar",
+    "\\T-SQL\\Oracle Sql"
   ],
-  "SelectedNode": "\\Homework\\2.sql",
+  "SelectedNode": "\\T-SQL\\Oracle Sql\\1.sql",
   "PreviewInSolutionExplorer": false
 }
