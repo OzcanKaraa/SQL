@@ -7,12 +7,11 @@ Top : Kayitlarin bir kismini gosterme icin.
 
 And : Karsilastirmada en az biri gerceklesmek zorunda. 1=1
 Or : Karsilastirmada sadece biri gerceklesse yeterlidir.Veya ikisi de gerceklesbilir. 1=0
-
 asc (Ascending)   : (A-Z - 1-9  siralama) Küçük->Büyük Artarak siralama
 desc (Descending) : (Z-A - 9-1  siralama) Büyük->Küçük Azalarak siralama
 
 Offset : Sorgudan satýr döndürmeye baþlamadan önce atlanacak satýr sayýsýný
-Fetch : 
+Fetch  : 
 
 
 
@@ -53,3 +52,15 @@ select TOP 10 * from Customers order by CompanyName
 select TOP 100 PERCENT * from Customers order by CompanyName            => Percent ile yuzde belirtme. TOP 100 PERCENT => %100 
 select TOP 50 PERCENT * from Customers order by CompanyName             => Percent ile yuzde belirtme. TOP 50 PERCENT => %50
 --------------------------------------------------------------------------------------------------------------------------------------
+Sum :Toplam
+Avg (Average) : Ortalama
+Count : Sayma
+Max : Maximum ,Min:Minimum
+Group By:
+
+
+select count(*) from employees 
+select count(1) from employees 
+select count(*) from employees where job_id = 'ST_MAN'
+
+select count(distinct job_id ) from employees        => 19 job_id   
