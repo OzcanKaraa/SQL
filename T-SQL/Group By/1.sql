@@ -1,4 +1,5 @@
 
+--------------------------------------------------------------------------------------------------------------------------------------
 Select MIN(TOTALPRICE),MAX(TOTALPRICE),COUNT(FICHENO),SUM(TOTALPRICE),AVG(TOTALPRICE) 
 From SALES 
 Where CITY='Ankara'
@@ -69,24 +70,52 @@ ORDER BY CITY , DATE2
 --------------------------------------------------------------------------------------------------------------------------------------
 -- Bir gune gore magzalarin Satis Raporlari
 
+select DATE2 , CITY , SUM(TOTALPRICE) AS TOTALPRICE from sales
+
+WHERE DATE2 = '2019-01-01'
+
+GROUP BY DATE2 , CITY ,TOTALPRICE
+
+ORDER BY DATE2 , CITY
 
 
+--EN COK SATAN 
+
+select DATE2 , CITY , SUM(TOTALPRICE) AS TOTALPRICE from sales
+
+WHERE DATE2 = '2019-01-01'
+
+GROUP BY DATE2 , CITY ,TOTALPRICE
+
+ORDER BY DATE2 ,SUM(TOTALPRICE) DESC
+--------------------------------------------------------------------------------------------------------------------------------------
 
 -- Sehirlerin Aylara gore Satis Raporlari
 
+SELECT   CITY, MONTHNAME_ ,SUM(TOTALPRICE)  AS TOTALPRICE  FROM SALES
+GROUP BY  CITY , MONTHNAME_
+ORDER BY  CITY , MONTHNAME_ ,SUM(TOTALPRICE) DESC
 
 
+SELECT DATEPART(MONTH,'2019-01-01')  
+
+UPDATE SALES SET MONTHNAME_ = '01.OCAK' WHERE DATEPART(MONTH,DATE2)=1 
+
+--------------------------------------------------------------------------------------------------------------------------------------
 -- Urun Kategorlerine gore Satis Raporlari
 
 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
 -- Magzalarin Musteri Sayilarini Bulma
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------------
 -- Belli Bir Ciro uzerinde satis yapan Magzalari Listeleme
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
 
