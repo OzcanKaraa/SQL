@@ -1,4 +1,7 @@
---iKI Tabloyu Birlestirme 
+                              --JOIN KULLANMADAN TEMEL TABLO BIRLESTIRME ISLEMLERI 
+--------------------------------------------------------------------------------------------------------------------------------------
+
+ --iKI Tabloyu Birlestirme :
 
 SELECT USERS.* FROM USERS
 
@@ -7,7 +10,7 @@ SELECT USERS.* FROM USERS , ADDRESS WHERE USERS.ID = ADDRESS.USERID
 SELECT USERS.* , ADDRESS.ADDRESSTEXT  FROM USERS  , ADDRESS WHERE USERS.ID = ADDRESS.USERID AND USERS.ID = 1
 
 --------------------------------------------------------------------------------------------------------------------------------------
--- TABLO ADINDA AlIAS (AS) KULLANIM
+-- TABLO ADINDA AlIAS (AS) KULLANIM :
 
 SELECT U.NAMESURNAME ,
 U.EMAIL,
@@ -18,7 +21,7 @@ FROM USERS U , ADDRESS A
 WHERE U.ID = A.USERID 
 AND U.ID = 
 --------------------------------------------------------------------------------------------------------------------------------------
---SUTUN ISIMLERINDE ALIAS (AS)  KULLANIM
+--SUTUN ISIMLERINDE ALIAS (AS) KULLANIM :
 
 SELECT U.NAMESURNAME AS ADSOYAD,
 U.EMAIL MAILADRESI, 
@@ -30,7 +33,7 @@ WHERE U.ID = A.USERID
 AND U.ID = 1
 
 --------------------------------------------------------------------------------------------------------------------------------------
---BIRDEN FAZLA TABLO BIRLESTIRME  KULLANIM
+--BIRDEN FAZLA TABLO BIRLESTIRME  KULLANIM :
 --ID 1 OLAN 
 
 SELECT U.NAMESURNAME AS ADSOYAD,
@@ -48,7 +51,7 @@ USERS U , ADDRESS A ,COUNTRIES C , CITIES CT , TOWNS T , DISTRICTS D
 WHERE U.ID = A.USERID AND C.ID = A.COUNTRYID  AND CT.ID=A.CITYID AND T.ID = A.TOWNID AND D.ID = A.DISTRICTID AND U.ID = 1
 
 --------------------------------------------------------------------------------------------------------------------------------------
---BIRDEN FAZLA TABLO BIRLESTIRME  KULLANIM
+--BIRDEN FAZLA TABLO BIRLESTIRME  KULLANIM :
 --TUM KAYITLARDA
 
 SELECT U.NAMESURNAME AS ADSOYAD,
@@ -67,7 +70,7 @@ WHERE U.ID = A.USERID AND C.ID = A.COUNTRYID  AND CT.ID=A.CITYID AND T.ID = A.TO
 ORDER BY U.NAMESURNAME
 
 --------------------------------------------------------------------------------------------------------------------------------------
---BIRDEN FAZLA TABLO BIRLESTIRME  KULLANIM
+--BIRDEN FAZLA TABLO BIRLESTIRME  KULLANIM :
 --ANKARA SEHRINDE OLAN KAYITLAR
 
 SELECT U.NAMESURNAME AS ADSOYAD,
@@ -86,7 +89,7 @@ WHERE U.ID = A.USERID AND C.ID = A.COUNTRYID  AND CT.ID=A.CITYID AND T.ID = A.TO
 AND CT.CITY LIKE 'ANKARA'
 ORDER BY U.NAMESURNAME
 --------------------------------------------------------------------------------------------------------------------------------------
---ILISIKISEL VERI TABANI UZERINDE DISTINCT KULLANIMI
+--ILISIKISEL VERI TABANI UZERINDE DISTINCT KULLANIMI :
 --
 SELECT 
 COUNT(DISTINCT U.ID)
@@ -94,7 +97,7 @@ FROM
 USERS U , ADDRESS A ,COUNTRIES C , CITIES CT , TOWNS T , DISTRICTS D  
 WHERE U.ID = A.USERID AND C.ID = A.COUNTRYID  AND CT.ID=A.CITYID AND T.ID = A.TOWNID AND D.ID = A.DISTRICTID
 --------------------------------------------------------------------------------------------------------------------------------------
---ILISIKISEL VERI TABANI UZERINDE GROUP BY - HAVING KULLANIMI
+--ILISIKISEL VERI TABANI UZERINDE GROUP BY - HAVING KULLANIMI :
 --2 DEN FAZLA OLAN ADRES BILGISI ,ULKEDE,SEHIR LISTELEME
 
 SELECT 
@@ -106,7 +109,7 @@ GROUP BY U.NAMESURNAME
 HAVING COUNT(A.ID)>2
 
 --------------------------------------------------------------------------------------------------------------------------------------
--- SEHIRLERDEKI ADRES BILGISI , KULLANICI SAYISI , ILCELERIN MUSTERELERE GORE DAGILIMI 
+-- SEHIRLERDEKI ADRES BILGISI , KULLANICI SAYISI , ILCELERIN MUSTERELERE GORE DAGILIMI :
 
 SELECT 
 CT.CITY , COUNT(U.ID) AS KULLANICISAYISI , COUNT(DISTINCT D.DISTRICT) AS ILCESAYISI
