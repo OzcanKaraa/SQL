@@ -11,7 +11,6 @@
 	2 tabloda SOL taraftaki tablo tamami getirir.
 	Ve 2 tablonun kesistiklerini getirmesi.
 
-	Right Joinin tam tersi kurali mevcut.
 
 
 3-Right (Outer) Join :
@@ -19,7 +18,6 @@
 --   Left Joinin tam tersi kurali mevcut.
 	2 tabloda SAG taraftaki tablo tamami getirir.
 	Ve 2 tablonun kesistiklerini getirmesi.
-
 
 
 4- Full Join : 
