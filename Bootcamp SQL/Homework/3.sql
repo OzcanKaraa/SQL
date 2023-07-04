@@ -3,33 +3,37 @@
 1-HR şemasındaki çalışanların hangi yıllarda işe alındığını
 ve her yıldaki çalışan sayısını bulun.
 
-=>
+=> *** Select  start_date, TO_CHAR( start_date,'YYYY') as "YIL" from job_history
 
 --------------------------------------------------------------------------------------------------------------------------------------
 2- HR şemasındaki her JOB ID icin toplam Salary tutarını
 bulun
 
-=>
+=> ***select sum(min_salary) ,sum(max_salary) from jobs 
 --------------------------------------------------------------------------------------------------------------------------------------
 3-Buldugunuz sonucta JOB ID nin yaninda JOB Title
 kolonunu da gosterin
 
-=>
+=> *** select job_id ,job_title  from jobs j 
 --------------------------------------------------------------------------------------------------------------------------------------
 4-Employees ve Departments tablolarından çalışan ID'sini,
 adını, soyadını ve çalışanların ilgili departman adlarıyla
 birlikte gosteren bir query yazin
 - Cikan Sonuclari Departman Adina gore A dan Z ye
-siralayin
+listeleyiniz
 
-=>
+=> select e.employee_id ,e.first_name ,e.last_name ,d.department_name 
+from employees e ,departments d 
+order by 4
 
 --------------------------------------------------------------------------------------------------------------------------------------
 5- Employees tablosundan çalışan ID'sini, adını, soyadını ve
 calsanin ilgili yöneticisinin (Manager) adlarıyla birlikte
 alın gosteren bir query yazin.
 
-=>
+=> *** select e.employee_id ,e.first_name ,e.last_name ,e.manager_id 
+from employees e 
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 6-
@@ -46,7 +50,7 @@ Kisiden Fazla Calisani Olan veya Yoneticisi oldugu
 calisanlarin 1997 Eylul ayindan sonra ise basladi ise"
 
 
-=>
+=> 
 
 
 
