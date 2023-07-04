@@ -45,12 +45,12 @@ query yazin.
 
 Query sonucunu iki kolon halinde gosterin
 "Manager Name" ve "Number Of Employees Managed"
-- Yukaridaki sorguyu su sekilde modifiye edin : "5
-Kisiden Fazla Calisani Olan veya Yoneticisi oldugu
+- Yukaridaki sorguyu su sekilde modifiye edin :
+"5 Kisiden Fazla Calisani Olan veya Yoneticisi oldugu
 calisanlarin 1997 Eylul ayindan sonra ise basladi ise"
 
 
-=> 
+=>  ??
 
 
 
@@ -61,7 +61,8 @@ ve "IT_PROG" iş unvanına sahip çalışanların "Employee_ID",
 "First_Name", "Last_Name" ve "Salary" bilgilerini alın.
 
 
-=>
+=>  select employee_id ,e.salary ,job_id,salary ,first_name  from employees e 
+    where salary >6462 and job_id = 'IT_PROG'
 --------------------------------------------------------------------------------------------------------------------------------------
 8-"Employees", "Departments" ve "Locations" tablolarından
 çalışanların "Employee_ID", "First_Name", "Last_Name",
@@ -69,19 +70,30 @@ ve "IT_PROG" iş unvanına sahip çalışanların "Employee_ID",
 departman ve lokasyon adlarıyla birlikte alın.
 - Sonucun butun employeeleri gosterdiginden emin
 olun ***
-- Eger Sehir ismi bos olan kayit vase onlari 'Sehir
+- Eger Sehir ismi bos olan kayit varsa onlari 'Sehir
 Bilinmiyor' diye gosterin
 
+=> select 
+e.employee_id ,e.first_name ,e.last_name ,
+d.department_name ,d.department_id ,
+l.city
+from employees e 
+join departments d  on e.department_id = d.department_id 
+join locations l on  d.location_id =l.location_id   
+order by 6
 
-
-=>
 --------------------------------------------------------------------------------------------------------------------------------------
 9-Calisan İsimleri, iş tanımlarını ve maaşlarını içeren bir
 sonuç kümesi döndürün. Sonuçları maaş sırasına göre azalan
 şekilde sıralayın.
 
 
-=>
+=> select 
+e.employee_id ,e.first_name ,e.last_name ,
+e.job_id ,
+e.salary 
+from employees e 
+order by 5 desc
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
@@ -89,22 +101,37 @@ sonuç kümesi döndürün. Sonuçları maaş sırasına göre azalan
 sonuç kümesi döndürün. Sadece ortalama maaşı 5000'den büyük
 olan departmanları gösterin.
 
-=>
+ **** 
+ => select 
+    e.employee_id ,e.first_name ,e.last_name ,
+    e.job_id ,e.salary ,
+    d.department_name ,d.department_id 
+    from employees e 
+    join departments d  on e.department_id = d.department_id 
+    where salary > 5000
 
 --------------------------------------------------------------------------------------------------------------------------------------
-11-- Calisanlar icinde sadece yonetici posizyonunda olanlarin
+11-- Calisanlar icinde sadece yonetici pozisyonunda olanlarin
 isimlerini, soyisimlerini ve JOB Title larini gosteren bi
 query yazin. Sonuclari her kayittan sadece 1 tane olacak
 sekilde ve isim e gore A dan Z ye siralanmis haliyle gosterin.
+    ***
+    => select 
+     e.employee_id ,e.first_name ,e.last_name ,e.job_id ,e.salary ,
+      d.department_id ,
+    j.job_title 
+    from employees e 
+    join departments d  on e.department_id = d.department_id 
+    join jobs j on e.job_id = j.job_id 
+    where d.department_name ='Executive'
+    order by 2
 
-
-=>
 --------------------------------------------------------------------------------------------------------------------------------------
 12-Tum calisanlari kullanarak her yil ise alinan
 çalışanların sayısını ve o yil ise alinan kisi sayisinin
 toplam calisan sayisina karsin yüzdesini hesaplayın
 
-=>
+=> ***select start_date ,end_date  from job_history jh 
 
 --------------------------------------------------------------------------------------------------------------------------------------
 13- Tum calisanlarin isim , soy isim, departman isimleri ve
@@ -112,7 +139,11 @@ ise baslayip isi biraktiklari tarihleri gosterin. Eger Ise
 baslama ve bitis tarihi yoksa bu kayitlari sonuc listesinden
 cikarin.
 
-=>
+    => select 
+    e.first_name,e.last_name,
+    j.start_date ,j.end_date 
+    from job_history j
+    join employees e on j.employee_id = e.employee_id 
 
 
 
@@ -123,7 +154,12 @@ cikarin.
 yaziniz.
 
 
-=>
+  =>
+    select 
+    count( first_name) as "ToplamAd",
+    count(distinct first_name)  as "Tekil"
+    from employees e 
+    having count( first_name) >1
 
 
 
