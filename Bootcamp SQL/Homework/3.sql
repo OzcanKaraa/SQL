@@ -126,6 +126,13 @@ sekilde ve isim e gore A dan Z ye siralanmis haliyle gosterin.
     where d.department_name ='Executive'
     order by 2
 
+
+    select 
+    distinct e2.first_name ,e2.last_name ,job_title
+    from employees e 
+    left join employees e2 on e.manager_id = e2.employee_id
+    left join jobs j on e2.job_id= j.job_id	
+    where e2.first_name is not null
 --------------------------------------------------------------------------------------------------------------------------------------
 12-Tum calisanlari kullanarak her yil ise alinan
 çalışanların sayısını ve o yil ise alinan kisi sayisinin
