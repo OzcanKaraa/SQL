@@ -3,7 +3,7 @@
 --Subqueries : Bir Query ile baska bir query isleme alma.
 --------------------------------------------------------------------------------------------------------------------------------------
 --Single Row Sub Query Example : Tek satir sonuc donduren
-  Ortalama uzerinde olanlari listelemeortalama uzerinde olanlari listeleme
+  Ortalama uzerinde olanlari listeleme
 
 	select * 
 	from employees e
@@ -17,7 +17,6 @@
 	--------------------------------------------------------------------------------------------------------------------------------------
 	--Multi Row Sub Query Example : Birden fazla sonuc dondurme
 
-		--Departmandaki calisan kisi sayisi,departmanlarda ortalama calisan kisi sayisindan yuksek olanlari listeleme
 
 		IN     : Icinde olanlar
 		NOT IN : Icinde olmayanlar
@@ -76,5 +75,7 @@
 
 		left join departments d  on d.department_id = a.department_id 
 		Where a.salary > 10000 and a.manager_id is not null
+
+
 
 
