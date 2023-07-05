@@ -7,9 +7,6 @@
 
 
 
-
-
-
 -------------------------------------------------------------------------------------------------------------------------------------
 2-) Bir çalýþanýn iþ unvanýný ve departman adýný döndüren bir SQL fonksiyonu oluþturun. Fonksiyonun input'u çalýþan id'si (employee_id) olmalýdýr.
 	=>
