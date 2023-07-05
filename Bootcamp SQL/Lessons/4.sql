@@ -1,5 +1,4 @@
-/* 09.06.2023  */
-
+/* 09.06.2023   Derste cozdugumuz odevler */ 
 
 --------------------------------------------------------------------------------------------------------------------------------------
 11- Calisanlar icinde sadece yonetici pozisyonunda olanlarin
@@ -57,3 +56,39 @@ left join (
 )toplam_sayi  on date_part('year',e.hire_date) =  hire_year
 order by hire_year
 --------------------------------------------------------------------------------------------------------------------------------------
+14- **** Employees tablosunda birden fazla bulunan isimleri
+(First Name) ve kac defa tekrar ettigini bulan bir query
+yaziniz.
+
+select first_name , count(*) as tekrar_eden from employees e 
+group by first_name 
+having count(*)>1
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+13-Tum calisanlarin isim , soy isim, departman isimleri ve
+ise baslayip isi biraktiklari tarihleri gosterin. Eger 
+baslama ve bitis tarihi yoksa bu kayitlari sonuc listesinden
+cikarin.
+
+
+1.Yol
+    select first_name ,last_name ,department_name,start_date ,end_date   from employees e 
+    left join departments d on d.department_id =e.department_id 
+    left join job_history jh on e.employee_id = jh.employee_id 
+    where start_date is not null                                     --Bos olanlari goruntulemez.
+
+
+2.Yol 
+    select first_name ,last_name ,department_name,start_date ,end_date   from employees e 
+    left join departments d on d.department_id =e.department_id 
+    inner join job_history jh on e.employee_id = jh.employee_id 
+
+
+3.Yol
+
+     select first_name ,last_name ,department_name,start_date ,end_date ,jh.job_id  from job_history jh
+    left join employees e  on e.employee_id = jh.employee_id 
+     left join departments d on d.department_id =e.department_id   
+
+

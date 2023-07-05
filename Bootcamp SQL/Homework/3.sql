@@ -142,7 +142,7 @@ toplam calisan sayisina karsin yüzdesini hesaplayın
 
 --------------------------------------------------------------------------------------------------------------------------------------
 13- Tum calisanlarin isim , soy isim, departman isimleri ve
-ise baslayip isi biraktiklari tarihleri gosterin. Eger Ise
+ise baslayip isi biraktiklari tarihleri gosterin. Eger
 baslama ve bitis tarihi yoksa bu kayitlari sonuc listesinden
 cikarin.
 
