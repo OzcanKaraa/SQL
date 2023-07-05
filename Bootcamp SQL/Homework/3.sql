@@ -162,11 +162,7 @@ yaziniz.
 
 
   =>
-    select 
-    count( first_name) as "ToplamAd",
-    count(distinct first_name)  as "Tekil"
-    from employees e 
-    having count( first_name) >1
+   
 
 
 
