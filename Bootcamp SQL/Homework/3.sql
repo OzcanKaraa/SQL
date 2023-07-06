@@ -1,5 +1,5 @@
 /*07/6/2023   Odev Soruları: Veritabanlarına ve SQL'e Giriş   */
-
+--------------------------------------------------------------------------------------------------------------------------------------
 1-HR şemasındaki çalışanların hangi yıllarda işe alındığını ve her yıldaki çalışan sayısını bulun.
 
 => *** Select  start_date, TO_CHAR( start_date,'YYYY') as "YIL" from job_history
@@ -12,14 +12,15 @@
 3-Buldugunuz sonucta JOB ID nin yaninda JOB Title kolonunu da gosterin
 
 => *** select job_id ,job_title  from jobs j 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-4-Employees ve Departments tablolarından çalışan ID'sini, adını, soyadını ve çalışanların ilgili departman adlarıyla birlikte gosteren bir query yazin. Cikan Sonuclari Departman Adina gore A dan Z ye listeleyiniz
+--------------------------------------------------------------------------------------------------------------------------------------
+4-Employees ve Departments tablolarından çalışan ID'sini, adını, soyadını ve çalışanların ilgili departman adlarıyla birlikte gosteren bir query yazin.
+  Cikan Sonuclari Departman Adina gore A dan Z ye listeleyiniz
 
 => select e.employee_id ,e.first_name ,e.last_name ,d.department_name 
 from employees e ,departments d 
 order by 4
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 5- Employees tablosundan çalışan ID'sini, adını, soyadını ve calsanin ilgili yöneticisinin (Manager) adlarıyla birlikte alın gosteren bir query yazin.
 
 => *** select e.employee_id ,e.first_name ,e.last_name ,e.manager_id 
@@ -27,14 +28,13 @@ from employees e
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
-6- 5 kisiden fazla calisani olan managerlerin ismini ve kac kisinin manager i oldugunu gosteren ve sonucu yonetilen calisan sayisina gore buyukten kucuge siralayip gosteren bir query yazin. 
+6- 5 kisiden fazla calisani olan managerlerin ismini ve kac kisinin manager i oldugunu gosteren
+   ve sonucu yonetilen calisan sayisina gore buyukten kucuge siralayip gosteren bir query yazin. 
 
     Query sonucunu iki kolon halinde gosterin  "Manager Name" ve "Number Of Employees Managed"
   - Yukaridaki sorguyu su sekilde modifiye edin :"5 Kisiden Fazla Calisani Olan veya Yoneticisi oldugu calisanlarin 1997 Eylul ayindan sonra ise basladi ise"
 
 =>  ??
-
-
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
@@ -44,7 +44,8 @@ from employees e
 =>  select employee_id ,e.salary ,job_id,salary ,first_name  from employees e 
     where salary >6462 and job_id = 'IT_PROG'
 --------------------------------------------------------------------------------------------------------------------------------------
-8-"Employees", "Departments" ve "Locations" tablolarından çalışanların "Employee_ID", "First_Name", "Last_Name", "Department_Name" ve "City" bilgilerini çalışanların ilgili departman ve lokasyon adlarıyla birlikte alın.
+8-"Employees", "Departments" ve "Locations" tablolarından çalışanların 
+   "Employee_ID", "First_Name", "Last_Name", "Department_Name" ve "City" bilgilerini çalışanların ilgili departman ve lokasyon adlarıyla birlikte alın.
   - Sonucun butun employeeleri gosterdiginden emin olun ***
  - Eger Sehir ismi bos olan kayit varsa onlari 'Sehir Bilinmiyor' diye gosterin
 
@@ -70,7 +71,8 @@ order by 5 desc
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
-10- Departman adı, ortalama maaş ve çalışan sayısı içeren bir sonuç kümesi döndürün. Sadece ortalama maaşı 5000'den büyük olan departmanları gösterin.
+10- Departman adı, ortalama maaş ve çalışan sayısı içeren bir sonuç kümesi döndürün. 
+  Sadece ortalama maaşı 5000'den büyük olan departmanları gösterin.
 
  **** 
  => select 
