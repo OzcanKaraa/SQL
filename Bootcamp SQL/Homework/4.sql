@@ -30,7 +30,7 @@ where salary = (select max(salary) from employees e2 )
 
 5-Calışanların sayısınin en fazla oldugu departmani
 hesaplayın ve Departman Name ini ve Caslisan Sayisini gosterin
-(Dogru Cevap : Departman Name = IT / Calisan Sayisi = 45) *
+(Dogru Cevap : Departman Name = Shippin / Calisan Sayisi = 45) *
 
 
 => ???
@@ -43,11 +43,22 @@ hesaplayın ve Departman Name ini ve Caslisan Sayisini gosterin
 	left join departments d on e.department_id = d.department_id 
 	where department_name ='IT' OR department_name = 'SALES'
 
+
+	select *  from departments d  
+	where department_name = 'IT' 
+	union 
+	select *  from departments d   where department_name = 'SALES' 
+
 	7-Departmanı 'HR', 'IT' veya 'Sales' olan çalışanların
 	listesini bulun (OR Kullanmadan yazin)
 	***
 	=> select * from departments d  
 	where department_name in ('HR', 'IT','Sales')
+
+
+	=> select * from employees e 
+	left join departments d on d.department_id =e.department_id 
+	where department_name in ('HR','IT','Sales')
 
 	8- Maaşı, kendi departmanının ortalama maaşından yüksek olan
 	ve yöneticisi IT departmanında olmayan çalışanları bulun. *

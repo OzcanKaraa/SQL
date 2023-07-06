@@ -38,20 +38,17 @@
 		from employees e 
 		 where department_id = e.department_id)
 		 --------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 		 UNION :Tablolari Birlestirme. Tekrar eden verileri gostermez.
 
 		-- Employee Id 120 den kucuk olanlar  ve 1990 yilindan once ise girenler
-				 select *  from employees e 
+		select *  from employees e 
 		where employee_id < 120
 		union
 		select * from employees e 
 		where date_part('year',hire_date) <1990
 
-
-		 UNION All : Tekrar edenleri de gosterir tumunu gosterir.
+		--------------------------------------------------------------------------------------------------------------------------------------
+		UNION All : Tekrar edenleri de gosterir tumunu gosterir.
 
 		 -- Employee Id 120 den kucuk olanlar  ve 1990 yilindan once ise girenler
 				 select *  from employees e 
@@ -60,21 +57,24 @@
 		select * from employees e 
 		where date_part('year',hire_date) <1990
 
+		--------------------------------------------------------------------------------------------------------------------------------------
+		INNER QUERY - Ic Ice Query Sorgulama ****(COKKKK ONEMLIIII)
 
-
-		--INNER QUERY - IC ICE QUERY
 		--Employee Id 120 den kucuk olanlar  ve 1990 yilindan once ise girenler Departman isimleri VE MAASI 1000 DEN YUKSEK OLANLAR
-		select first_name,last_name,department_name  from 
+
+		select first_name,last_name,department_name  
+		from 
 		(
-		select *  from employees e 
+		select *  
+		from employees e 
 		where employee_id < 120
 		union 
 		select * from employees e 
 		where date_part('year',hire_date) <1990
 		)A
-
 		left join departments d  on d.department_id = a.department_id 
 		Where a.salary > 10000 and a.manager_id is not null
+		--------------------------------------------------------------------------------------------------------------------------------------
 
 
 
