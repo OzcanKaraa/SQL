@@ -1,4 +1,4 @@
-/* 14.06.2023  Konu Anlatim */
+/* 14.06.2023  Konu Anlatim I.Part */
 
 --CASE WHEN : IF/ELSE Kosul 
 
@@ -26,12 +26,16 @@
 
 ------------------------------------------------------------------------------------------------------
 	CTE : COMMON TABLE EXPRESSION 
+	-----------------------------------------
 
 	1-Gecici sonuc uretip bir sonraki query de kullanma firsati veriyor.
 	2-Tablo olarak kullanilabiliyor.
 	3-With ile Baslar 
-
-
+	4-Birden fazla CTE kullanilabilir.
+	5-Memory de kullanilan gecici veriler kumesidir.
+	6-Hiyerasik yapi sonucuna erisebilmek icin
+	7-Kullanildigi kadar is gorur.
+	
 ------------------------------------------------------------------------------------------------------
 --CTE Example 1: benim_tablom isminde tablo olusturuldu
 	 with benim_tablom as
@@ -74,6 +78,27 @@
 		select job_title , avg_salary from ortalama_maaslar
 
 ------------------------------------------------------------------------------------------------------
+-- IC ICE CTE KULLANIM
+
+		with ortalama_maas as 
+		(
+			select j.job_title , salary from employees e 
+			left join jobs j on j.job_id = e.job_id
+			where salary > (select avg(salary) from employees e)
+	
+		),
+		  ortalama_maaslar as 
+		(
+		   select  job_title , avg(salary) as avg_salary from employees e 
+			left join jobs j  on j.job_id = e.job_id
+			group by job_title
+		)
+			select job_title , avg_salary from ortalama_maaslar
+------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
