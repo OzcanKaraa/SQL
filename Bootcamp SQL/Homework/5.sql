@@ -4,6 +4,7 @@
    Buldugunuz bu sonuctan, her departmanin ismini ve calışan sayısıni gosterin.
    Calisan sayisi 0 olan departmanlar için "Calisan Bulunamadı" ifadesini kullanın. (Ipucu With CTE ve CASE WHEN Ifadelerini Kullanarak Yaziniz)
 
+   --YANLIS QUERY
 => 	select * from
 	(
 		with ortalama as 

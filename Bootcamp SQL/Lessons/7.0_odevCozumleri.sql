@@ -4,6 +4,17 @@
    Buldugunuz bu sonuctan, her departmanin ismini ve calýþan sayýsýni gosterin.
    Calisan sayisi 0 olan departmanlar için "Calisan Bulunamadý" ifadesini kullanýn. (Ipucu With CTE ve CASE WHEN Ifadelerini Kullanarak Yaziniz)
 
+   		with tablom as (
+		select department_name as dept_ismi,count(e.employee_id) as calisan_sayisi ,avg(salary) as ortalama_maas from  departments d 
+		left join employees e on d.department_id = e.department_id
+		group by department_name
+			)
+        select department_name,ortalama_maas,
+        case 
+        		when calisan_sayisi = 0 then 'Calisan Bulunamadi'
+        		else cast(calisan_sayisi as varchar) --Veri Donusumu
+        end as calisan_bilgisi
+        from tablom
 
  2- Calýþanlarýn adlarýný ve yöneticilerinin adlarýný listeleyin. Yöneticisi olmayan çalýþanlar için "Yönetici Bulunamadý" ifadesini kullanýn.
   (Ipucu With CTE ve CASE WHEN Ifadelerini Kullanarak Yaziniz)
