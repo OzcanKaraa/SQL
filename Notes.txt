@@ -20,3 +20,5 @@ Oracle Database Conection Tools
 	SYS (SYSDBA) : Oracle DB en ust yetkili ve tum veri tabani yonetimi saglayan kullanicisi
 	SYSTEM : SYS kullanicisindan sonra en yetkili kullanici,normal DBA haklarina sahip.
 --------------------------------------------------------------------------------------------------------------------------------------
+STTDEV (Sunucu Yedekleme)
+VARIANCE (Veri Tabani Geri Yukleme)

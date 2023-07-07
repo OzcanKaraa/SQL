@@ -1,6 +1,8 @@
 /* 09.06.2023   Konu Anlatim */ 
 
---Subqueries : Bir Query ile baska bir query isleme alma.
+   Subqueries : Bir Query ile baska bir query isleme alma.
+   Minus      : 2 Query farkini gosterme
+
 --------------------------------------------------------------------------------------------------------------------------------------
 --Single Row Sub Query Example : Tek satir sonuc donduren
   Ortalama uzerinde olanlari listeleme
@@ -13,7 +15,6 @@
 	select *
 	from employees e
 	where salary < (select avg(salary) as ortalama_maas from employees e where salary=24000)
-
 	--------------------------------------------------------------------------------------------------------------------------------------
 	--Multi Row Sub Query Example : Birden fazla sonuc dondurme
 

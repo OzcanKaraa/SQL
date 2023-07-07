@@ -18,7 +18,7 @@ Distinct **
 Substring **
 CONVERT ***
 
-
+Concat
 To_Char
 To_Date
 To_Number
@@ -47,6 +47,8 @@ FUNCTION
 CTAS ***
 EXTRACT ***
 coalesce ****
+INDEX
+
 
 
 
