@@ -40,6 +40,15 @@ HAVING ***
 JOINLER *******
 
 
+CASE WHEN
+CTE
+FUNCTION
+
+CTAS ***
+EXTRACT ***
+coalesce ****
+
+
 
 
 

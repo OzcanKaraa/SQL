@@ -2,18 +2,18 @@
 
 --CASE WHEN : IF/ELSE Kosul 
 
-	syntax :   	case 
-				when
-				else 
-				end 
+	syntax :   	case   -->  Case : Sartlari Olusturma ,Baslatma
+				when   --> Kosullar
+				else   --> When kosulu olmazi ise 
+				end    --> Kosulu bitirme.
 
 
 --  Case When Example : Maas araliklarina gore sonuclari goruntuleme:
 ---------------------------------------------------
 
-	select employee_id ,first_name ,last_name,salary ,
+	select employee_id ,first_name ,last_name, salary,
 
-	case        -->  Case : Sartlari Olusturma 
+	case       
 
 		when salary > 5000 and salary < 7000  then 'Dusuk Gelir'
 		when salary > 7001 and salary <= 9000 then 'Ortalama Gelir'

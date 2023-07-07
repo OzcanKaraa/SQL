@@ -17,7 +17,6 @@
 	--------------------------------------------------------------------------------------------------------------------------------------
 	--Multi Row Sub Query Example : Birden fazla sonuc dondurme
 
-
 		IN     : Icinde olanlar
 		NOT IN : Icinde olmayanlar
 		--------------------------------------------------------------------------------------------------------------------------------------
@@ -33,12 +32,15 @@
 
 		  --Kendi departmaninin ortalamasinin uzerinde maas alan kisiler
 
-		 select *  from  employees e 
+		select *  from  employees e 
 		where salary > (select  avg(salary)
 		from employees e 
 		 where department_id = e.department_id)
 		 --------------------------------------------------------------------------------------------------------------------------------------
 		 UNION :Tablolari Birlestirme. Tekrar eden verileri gostermez.
+		 Ayný sütun isimlerine sahip iki sorgunun sonuçlarýný birleþtirmek için kullanýlýr. Ýki
+		sorgunun sonuçlarý birleþtirilirken tamamen ayný olan satýrlardan yalnýzca birisi listelenir.
+
 
 		-- Employee Id 120 den kucuk olanlar  ve 1990 yilindan once ise girenler
 		select *  from employees e 
@@ -48,7 +50,10 @@
 		where date_part('year',hire_date) <1990
 
 		--------------------------------------------------------------------------------------------------------------------------------------
-		UNION All : Tekrar edenleri de gosterir tumunu gosterir.
+		UNION All : Tekrar edenleri de gosterir tumunu gosterir. (Ýki sorguyu birleþtirme-tekrarlý)
+					UNION deyimi gibi ayný sütun isimlerine sahip iki sorgunun sonuçlarýný birleþtirmek
+					için kullanýlýr. Farklý olarak iki sorgunun sonuçlarý birleþtirilirken tamamen ayný olan
+					satýrlarýn hepsi listelenecektir.
 
 		 -- Employee Id 120 den kucuk olanlar  ve 1990 yilindan once ise girenler
 				 select *  from employees e 
