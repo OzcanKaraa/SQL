@@ -20,5 +20,22 @@ Oracle Database Conection Tools
 	SYS (SYSDBA) : Oracle DB en ust yetkili ve tum veri tabani yonetimi saglayan kullanicisi
 	SYSTEM : SYS kullanicisindan sonra en yetkili kullanici,normal DBA haklarina sahip.
 --------------------------------------------------------------------------------------------------------------------------------------
-STTDEV (Sunucu Yedekleme)
-VARIANCE (Veri Tabani Geri Yukleme)
+	STTDEV (Sunucu Yedekleme)
+	VARIANCE (Veri Tabani Geri Yukleme)
+--------------------------------------------------------------------------------------------------------------------------------------
+	Veri Ambari 4 yillik tecrubeli sorulan sorular 
+	Partition ne ise yarar
+	Dubliqe bulan query
+	Index ne ise yarar Performasn acisindan onemli 
+
+	--------------------------------------------------------------------------------------------------------------------------------------
+	Veri mulakatlari ileri seviye mulakat sorular IPUCU COKK ONEMLII
+	1-Overlord sistemi sql (Sql Admin)
+	2-Veri muhendisligin onemi nicin sectin gibi
+	3-Daha once Bussiness tarafi ile ne isler yapti yaptigi Bussiness dashboard NE ISE YARADI 
+	4-Yaptigi is bussiness katkisi ??
+	5-Veri muhendisliginin yaptigi isi IS Birimine Katkisi nedir?? (Mantikli Cevap verilmesi gerekiyor)
+	--------------------------------------------------------------------------------------------------------------------------------------
+
+	DATA SET 
+
