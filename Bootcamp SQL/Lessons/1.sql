@@ -1,7 +1,7 @@
 /* 31.05.2023  4.*/
 
  Data Manipulation Language( DML) /Data Manipulasyon Komutlari:
- RDMS Objeleri uzerinde yapilan islemler 
+ RDMS Objeleri uzerinde yapilan islemler .Tablo olusturma islemleri.
 => Select ,Insert ,Update,Delete , Truncate
 --------------------------------------------------------------------------------------------------------------------------------------
 Data Definition Language (DDL) / VeriTabani Manipulasyon Komutlari:
@@ -12,7 +12,19 @@ Veriler uzerinde yapilan islemler
 Tekrar eden verileri tekillestirmek amaci ile yapilandirilan veritabani sistemleridir.
 --------------------------------------------------------------------------------------------------------------------------------------
 SORU1: DDL- DML arasindaki fark Nedir?? 
-
+**DDL tablo olusturma islemleri ,DML tablo olusturulan veriler uzerinde islemler icin kullanilir.
+--------------------------------------------------------------------------------------------------------------------------------------
+SORU2: Truncate - Delete - DROP Farki Nelerdir??
+ Truncate ,Tüm tablonun içindeki verileri siler.Tabloyu silmez.(DDL) (truncate departments_bckp)
+ DROP , Database tablolari tumunu veriler tablolar dahil siler.(DDL)  (drop table employees_bckp)
+ Delete ,satır satır siler (DML)
+ --------------------------------------------------------------------------------------------------------------------------------------
+SORU3:Where-Having Farklar Nelerdir ???
+Where filtreleme islemi icin kullanilir 
+Having   filtreleme islemi icin kullanilir  ama Group By ile kullanilir
+--------------------------------------------------------------------------------------------------------------------------------------
+Unique : Tabloda Benzersiz, Essiz,Tekil .. 
+Unique Ornek: 2 Employee Id 100 olan tabloyu insert edilemez.
 --------------------------------------------------------------------------------------------------------------------------------------
 1- CREATE : Tablo olusturma
 ----------
