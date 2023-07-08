@@ -94,7 +94,32 @@
 			group by job_title
 		)
 			select job_title , avg_salary from ortalama_maaslar
-------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+
+			with calisan_sayisi2 as (
+			select 
+			e.department_id,
+			count(*) as toplam_calisan_sayisi
+			from
+			employees e 
+			group by
+			department_id
+			),
+			departmanlar as 
+			(
+
+			select  department_id, toplam_calisan_sayisi,
+
+			case 
+				when  toplam_calisan_sayisi > 10 then 'Buyuk Departman'
+				when toplam_calisan_sayisi between 5 and 10 then 'Orta Buyuklukte Departman'
+				else 'Kucuk Departman'
+			end as departman_etiketi
+
+			from calisan_sayisi2
+			)
+			select department_id,toplam_calisan_sayisi,departman_etiketi from departmanlar
+--------------------------------------------------------------------------------------------------------
 
 
 
