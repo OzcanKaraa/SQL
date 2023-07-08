@@ -86,6 +86,7 @@ I.YOL :
 		   select (e.salary - ortalama) as fark  from maas_ortalama m 
 		   right join employees e on e.department_id = m.department_id   -->sagdaki tablo baz alinir.(employees)
 		   where employee_id = calisan_id
+
 		$$
 		
 
