@@ -28,7 +28,7 @@ Oracle Database Conection Tools
 	Dubliqe bulan query
 	Index ne ise yarar Performasn acisindan onemli 
 
-	--------------------------------------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------------------------------------
 	Veri mulakatlari ileri seviye mulakat sorular IPUCU COKK ONEMLII
 	1-Overlord sistemi sql (Sql Admin)
 	2-Veri muhendisligin onemi nicin sectin gibi
