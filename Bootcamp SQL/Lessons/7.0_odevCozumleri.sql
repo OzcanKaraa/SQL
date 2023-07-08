@@ -66,10 +66,36 @@
 
   --------------------------------------------------------------------------------------------------------------------------------------
   4- Bir çalýþanýn maaþinin calistigi departmanin ortalamsindan ne kadar fazla oldugunu donduren bir fonksiyon yaziniz. 
-   Bu fonksiyon,employee ID yi input olarak alir,maasini departman ortalamasindan cikarip numerik bir deger dondurur. 
-   Yarattiginiz bu fonksiyonu bir select querysi icinde cagirip employees tablosundaki her calisan icin 
-   employee_id, isim, soyisim, maas ve buldugunuz maas farki degerini gosteriniz.
+	Bu fonksiyon,employee ID yi input olarak alir,maasini departman ortalamasindan cikarip numerik bir deger dondurur. 
+	Yarattiginiz bu fonksiyonu bir select querysi icinde cagirip employees tablosundaki her calisan icin 
+	employee_id, isim, soyisim, maas ve buldugunuz maas farki degerini gosteriniz.
 
 
 
-   --------------------------------------------------------------------------------------------------------------------------------------
+	--Fonksiyon Olusturma
+  ==>	 create or replace function maas_farki (calisan_id INT)   --INPUT
+		returns numeric  
+		language sql as 
+		$$
+		
+			with maas_ortalama as ( 
+		   select department_id , avg(salary) as ortalama from employees e 
+		   group by department_id
+		   )
+		   select (e.salary - ortalama) as fark  from maas_ortalama m 
+		   right join employees e on e.department_id = m.department_id   -->sagdaki tablo baz alinir.(employees)
+		   where employee_id = calisan_id
+		$$
+		
+
+		--Fonksiyon cagirma 
+	==> select first_name , last_name , salary , maas_farki(employee_id) 
+		from employees e 
+
+	--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+

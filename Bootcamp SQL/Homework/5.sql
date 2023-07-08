@@ -38,12 +38,14 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------
 3-HR şemasındaki DEPARTMENTS tablosundaki departmanların IDlerini ve o departmanda çalışan toplam çalışan sayısını listeleyen bir CTE oluşturun.
-  Ek olarak,yeni bir CTE de ise çalışan sayısı 10 'dan fazla olan departmanlar için 'Büyük Departman', 
+  Ek olarak,yeni bir CTE de iste çalışan sayısı 10 'dan fazla olan departmanlar için 'Büyük Departman', 
   5-10 arasında olan departmanlar için 'Orta Büyüklükte Departman' ve 
   5'ten az olan departmanlar için 'Küçük Departman' olarak bir etiket belirtin.
   Son olarak department_id, toplam_calisan_sayisi, departman_etiketi kolonlar ile sonucu yukarida en son olusturdugunuz CTE den okuyun
 
-=> 		select department_id,count(),department_name from departments  ()
+  **************************YAPAMADIM BI DAHA BAKKKK
+
+=> 		select department_id , department_name from departments  ()
 	with departman as 
 	(
 		select  d.department_id,count(j.job_id) from departments  d 
@@ -68,6 +70,7 @@
    Yarattiginiz bu fonksiyonu bir select querysi icinde cagirip employees tablosundaki her calisan icin 
    employee_id, isim, soyisim, maas ve buldugunuz maas farki degerini gosteriniz.
 
+    **************************YAPAMADIM BI DAHA BAKKKK
 => 	create or replace function maas_araligi(maas salary)
 		returns integer as
 		$$
