@@ -1,4 +1,4 @@
-/* 16.06.2023 Konu Anlatim */
+/* 16.06.2023 Konu Anlatim PART-I*/
 
 Recursive : Ic ice Query tekrar etme.For Dongusu
 			Hiyerarsi Ilk selecte tanimlama diger select join ile diger hiyerasiler sonuclari dondurur.
@@ -125,7 +125,6 @@ select employee_id,first_name,last_name,manager_id , kidem
 from calisan_hiyerarsisi
 order by kidem,employee_id
 
-
 --------------------------------------------------------------------------------------------------------------------------------------
 with recursive calisan_hiyerarsisi as 
 (
@@ -141,11 +140,18 @@ select employee_id,first_name,last_name,manager_id , kidem
 from calisan_hiyerarsisi
 order by kidem,employee_id
 
-
 --------------------------------------------------------------------------------------------------------------------------------------
 --Recursive Manuel Mantigi :
 
-
+with recursive calisan_hiyerarsisi as 
+(
+select employee_id,first_name,last_name,manager_id , 1 as kidem
+from employees 
+ where employee_id = 100
+union all
+select e.employee_id,e.first_name,e.last_name,e.manager_id , 1+1 as kidem
+from employees e where manager_id = 100
+)
 
 
  --------------------------------------------------------------------------------------------------------------------------------------
