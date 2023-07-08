@@ -20,8 +20,7 @@
 
         from tablom
 
-
-        --------------------------------------------------------------------------------------------------------------------------------------
+ --------------------------------------------------------------------------------------------------------------------------------------
  2- Calýþanlarýn adlarýný ve yöneticilerinin adlarýný listeleyin. Yöneticisi olmayan çalýþanlar için "Yönetici Bulunamadý" ifadesini kullanýn.
   (Ipucu With CTE ve CASE WHEN Ifadelerini Kullanarak Yaziniz)
 
@@ -114,6 +113,8 @@ II.YOL :
 		--Fonksiyon cagirma 
 	 select department_id ,first_name , last_name , salary , maas_farki_2(employee_id) 
 		from employees e 
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
 

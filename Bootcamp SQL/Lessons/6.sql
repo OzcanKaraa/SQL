@@ -140,6 +140,8 @@ join calisan_hiyerarsisi ch on ch.employee_id = e.manager_id
 select employee_id,first_name,last_name,manager_id , kidem
 from calisan_hiyerarsisi
 order by kidem,employee_id
+
+
 --------------------------------------------------------------------------------------------------------------------------------------
 --Recursive Manuel Mantigi :
 
