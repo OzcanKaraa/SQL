@@ -71,9 +71,10 @@
 	employee_id, isim, soyisim, maas ve buldugunuz maas farki degerini gosteriniz.
 
 
+I.YOL :
 
 	--Fonksiyon Olusturma
-  ==>	 create or replace function maas_farki (calisan_id INT)   --INPUT
+         create or replace function maas_farki (calisan_id INT)   --INPUT
 		returns numeric  
 		language sql as 
 		$$
@@ -89,10 +90,31 @@
 		
 
 		--Fonksiyon cagirma 
-	==> select first_name , last_name , salary , maas_farki(employee_id) 
+	    select first_name , last_name , salary , maas_farki(employee_id) 
 		from employees e 
 
-	--------------------------------------------------------------------------------------------------------------------------------------
+	
+
+II.YOL : 
+
+	--Fonksiyon Olusturma
+	create or replace function maas_farki_2 (calisan_id INT)   
+			returns numeric  
+			language sql as 
+			$$
+		
+				select (salary - ortalama) as fark from employees e 
+				left join (select department_id , avg(salary) as ortalama from employees e
+				group by department_id ) b on e.department_id  = b.department_id
+				where e.employee_id = calisan_id
+			$$
+
+			
+		--Fonksiyon cagirma 
+	 select department_id ,first_name , last_name , salary , maas_farki_2(employee_id) 
+		from employees e 
+
+
 
 
 
