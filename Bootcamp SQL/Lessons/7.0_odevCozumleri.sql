@@ -64,20 +64,6 @@
 					)
 				select calisan,yonetici,yonetici_tarama from bilinmeyen
 
-
-
-
-
-  --------------------------------------------------------------------------------------------------------------------------------------
- 3- HR þemasýndaki DEPARTMENTS tablosundaki departmanlarýn IDlerini ve o departmanda çalýþan toplam çalýþan sayýsýný listeleyen bir CTE oluþturun.
-  Ek olarak,yeni bir CTE de ise çalýþan sayýsý 10 'dan fazla olan departmanlar için 'Büyük Departman', 
-  5-10 arasýnda olan departmanlar için 'Orta Büyüklükte Departman' ve 
-  5'ten az olan departmanlar için 'Küçük Departman' olarak bir etiket belirtin.
-  Son olarak department_id, toplam_calisan_sayisi, departman_etiketi kolonlar ile sonucu yukarida en son olusturdugunuz CTE den okuyu
-
-
-
-
   --------------------------------------------------------------------------------------------------------------------------------------
   4- Bir çalýþanýn maaþinin calistigi departmanin ortalamsindan ne kadar fazla oldugunu donduren bir fonksiyon yaziniz. 
    Bu fonksiyon,employee ID yi input olarak alir,maasini departman ortalamasindan cikarip numerik bir deger dondurur. 

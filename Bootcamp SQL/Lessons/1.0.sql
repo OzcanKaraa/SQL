@@ -46,3 +46,4 @@ Char - Varchar Farki Nedir??
 Varchar Degisken
 Char Ozel karakter.Degismez..
 --------------------------------------------------------------------------------------------------------------------------------------
+Select Top : Belirtilen sayida kaydi listeleme
