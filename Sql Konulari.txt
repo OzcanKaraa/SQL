@@ -58,6 +58,9 @@ PARTITIONS
 CURSOR (? MAYBE)
 
 
+REGEXP
+
+
 
 
 
