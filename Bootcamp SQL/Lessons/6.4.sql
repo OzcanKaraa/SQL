@@ -1,8 +1,7 @@
 /* 16.06.2023 Konu Anlatim Part-V */
+1-WIEWS:
 
 Views :Tablo uzerinden goruntu elde etme.
-
-
 -- Database de duran Query tablo degil.Her calistiginda query calistirmasi 
 -- View olusturup tekrardan yazip zaman kaybini onler.
 -- Viewlar komplex querylileri tekrar yazilmasini onune gecer.
@@ -28,7 +27,7 @@ select  from employee_departman_80
 
 
 
-Materialized Views: 
+2-Materialized Views: 
 
 --Database uzerinde tutulan tablo.
 -- View 'a gore Performansi daha hizlidir.
