@@ -10,11 +10,30 @@ scan (tarama islemi) eder.
 Index maliyeti dusurur.
 Index ile sql liste obje tablo ile hizli sonuc alinir.
 Index uzerinde aktif sekilde hizlica search yapip hizli sonuc donduren query
+Surekli update insert islemleri aktif tablolara index kurulmamasi da performansi artirir.
+Index search yapilan sutunlar uzerinde gerceklestirilir.Tc Kimlik ,ID 
+Tum sutunlarda index olmaz.Olur ise performans dusurur yavaslatir.
 
 Dezavantaj :
 --------------
 Obje oldugu icin diskte yer kaplar.
-Update insert islemleri yavaslatir.
+Update insert islemleri performansi duser yavaslatir.
+
+
+30 milyon kayit insert oldu index ile daha hizli olmasi icin:
+Index disable edilir.(Valid)
+Indexleri drop ile silip tekrar index olusturma.
+Tum tablolari olusturup insert islemlerde bitirip en son index olusturmus.
+Ya indexleri disable edilir.Ya da indexleri drop edilebilir.
+
+Indexleri drop edilir tablodan
+Indexle ugrasmayip Insert islemleri yapilir.Yuklemeler gerceklestirilir.
+Insert islemi bittikten sonra Indexleri tekrar olusturulabilir perfromansina gore.
+Index yokken tekrar index olusturmak maliyeti daha azdir.
+Ya da Indexi drop yerine Disable edilip Indexi ReBuild edilir.Valid aktif olur.
+
+Index varken insert islemi yapmak maliyeti fazla islem.
+
 
 
 
