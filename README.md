@@ -1,5 +1,5 @@
 <hr>
-<pre>                                    Techcareer Oracle-SQL Bootcampi                 
+<pre>                                    Techcareer SQL Bootcampi                 
 </pre>
 <hr>
 
