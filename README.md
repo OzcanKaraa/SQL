@@ -1,1 +1,6 @@
-<h2>Oracle PL/Sql</h2>
+<hr>
+<pre>                                      Techcareer Oracle-SQL Bootcampi -> Burtay Zulaloglu    
+                                           
+</pre>
+<hr>
+
