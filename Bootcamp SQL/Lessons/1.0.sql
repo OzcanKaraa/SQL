@@ -52,3 +52,10 @@ delete from a where < 4  --veriyi girilen where clause gore satir satir siler.
 --------------------------------------------------------------------------------------------------------------------------------------
 truncate table a --veriyi file system seviyesinde tek islemde siler.
 --------------------------------------------------------------------------------------------------------------------------------------
+Normalizasyon: 
+	Tekrarli verileri ortan kaldirma
+	Memory kisminda daha az yer kaplar.
+	Arama islemleri daha hizli yapma
+	Daha hizli sonuc alinir.
+--------------------------------------------------------------------------------------------------------------------------------------
+
