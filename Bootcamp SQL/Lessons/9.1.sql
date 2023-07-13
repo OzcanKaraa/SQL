@@ -34,6 +34,25 @@ where first_name = 'Steven'
 	create index emp_idx on employees (first_name) 
 
 
+	explain analyze 
+	select * from burtay.market_sales 
+	where BRAND = 'HAL' and STARTDATE >= '2017-01-01' and <='2017-02-01'
+
+	create index idx_market_sales on market_sales (brand,startdate,enddate)
+
+
+	explain analyze 
+	select * from burtay.market_sales 
+	where category_name1 = 'GIDA'
+
+	create index idx_category on market_sales(category_name1)
+
+
+	--TABLE SPACE : Database uzerinde verilerin tutuldugu dosya sistemleri.
+
+
+
+
 
 	CREATE TABLE ozcan.market_sales (
 		id varchar(255) NULL,
