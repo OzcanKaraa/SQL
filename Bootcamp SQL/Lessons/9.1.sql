@@ -48,7 +48,7 @@ where first_name = 'Steven'
 	create index idx_category on market_sales(category_name1)
 
 
-	--TABLE SPACE : Database uzerinde verilerin tutuldugu dosya sistemleri.
+	--TABLE SPACE : Database uzerinde verilerin tutuldugu dosya sistemleri.Schema tablolar tablespace de tutulur.
 
 
 
