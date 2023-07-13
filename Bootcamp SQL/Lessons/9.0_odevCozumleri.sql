@@ -80,8 +80,7 @@ select from calisan_dept_unvan(100)
 	group by department_id
 	)
 	select departments.department_name ,
-	employees.first_name ,
-	employees.last_name  as manager_name,
+	concat(employees.first_name ,' ',employees.last_name) as manager_name,
 	department_avg.ort_maas
 	from departments
 	join employees on departments.manager_id  = employees.employee_id 
@@ -154,6 +153,12 @@ select from calisan_dept_unvan(100)
 	left join departments d on d.department_id = e.department_id 
 
 --------------------------------------------------------------------------------------------------------------------------------------
+4- Employees tablosunda department_id sütunu için ismini kendinizin verdigi bir indeks oluþturun.
+
+create index idx_department_id on employees(department_id
+
+create table employee_yedek as select * from employees 
+create index idx_department_id on employees_yedek (department_id)
 
 
 
