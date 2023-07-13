@@ -24,20 +24,20 @@ old_data text
 select * from employees_audit
 
 
--- Delete fonksiyon ile create information tablo ekle
+-- Before Delete fonksiyon ile create information tablo ekle
 
 create or replace function log_deletion_audit()
 returns trigger as 
 $$ 
-	begin 
-		insert into employees_audit(action,employee_id,deleted_at,old_data)
-		values ('SILINDI',old.employee_id,now(),row_to_json(old)::text);
-		return old;
-	end
-	$$
-	language plpqsql;
+begin 
+	insert into employees_audit(action,employee_id,deleted_at,old_data)
+	values ('SILINDI',old.employee_id,now(),row_to_json(old)::text);             --json :veriyi dosya tutma tipi
+	return old;
+end
+$$
+language plpqsqlS;
 
---sonra trigger ile event haline donusturme
+--After trigger ile event haline donusturme
 
 
 
