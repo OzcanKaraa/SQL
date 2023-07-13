@@ -29,3 +29,11 @@ execute function insert_notifikasyon()
 insert into emp_yedek  (first_name,last_name) values ('Ali','Veli')
 insert into emp_yedek  (employee_id,first_name,last_name) values ('230','Ali','Veli')
 insert into emp_yedek  (employee_id,first_name,last_name) values ('245','Ali','Veli')
+
+-----------------------------------------------------------------------------------------------------------------
+SQL Partition : 
+Tabloya partition yaratma.
+1 milyon veride yil uzerinden tabloyu partition dosya sisteminde 1o yillik ise 10 a boler,
+Veriyi derli toplu tutuyor.
+islem daha hizli sonuclanir.
+Tabloyu boler.
