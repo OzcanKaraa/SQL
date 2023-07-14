@@ -46,14 +46,13 @@ select * from employees_audit
 		for each  row 
 		execute function log_deletion_audit()
 
-
-
 	delete from emp_yedek where employee_id = 100  --silme 
 	select * from employees_audit  
 	delete from emp_yedek where employee_id < 200
 
 	explain analyse 
 		delete from emp_yedek where employee_id < 200
+
 
 	--Yedek Tablo yaratma
 	select * from employees
