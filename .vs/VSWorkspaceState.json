@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Bootcamp SQL"
+    "\\Bootcamp SQL",
+    "\\Bootcamp SQL\\Bitirme_Projesi",
+    "\\Bootcamp SQL\\Lessons"
   ],
-  "SelectedNode": "\\Bootcamp SQL",
+  "SelectedNode": "\\Bootcamp SQL\\Lessons\\10.1.sql",
   "PreviewInSolutionExplorer": false
 }

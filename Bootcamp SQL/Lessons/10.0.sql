@@ -12,10 +12,7 @@ Performansin sorun olmadigi usecaselerde avantajli.
 Her triggerin icinde fonksiyon olmasina gerek yok.
 Triggers tablo uzerinde olur objedir.
 
-
-
 --Employees yedek tablosuna delete audit ekleme islemi (old)
-
 
 --Tablo yaratma
 create table employees_audit
@@ -28,8 +25,7 @@ old_data text
 
 select * from employees_audit
 
-
-	-- Before Delete fonksiyon ile create information tablo ekle
+-- Before Delete fonksiyon ile create information tablo ekle
 
 	create or replace function log_deletion_audit()
 	returns trigger as 
