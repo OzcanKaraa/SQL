@@ -5,7 +5,6 @@ Distinct: Tekrarli olanlardan sadece birini gosterme.
 --------------------------------------------------------------------------------------------------------------------------------------
 TEK  DEGERLI FONKSIYONLAR (Single-Row Functions):
 -------------------------------------------------
-
 1- Sayisal Fonksiyonlar:
 ------------------------
 Power : Üs alma 
@@ -93,25 +92,17 @@ To_Timestamp :
 To_Timestamp_TZ :
 Trunc(date):
 
-select hire_date,add_months(hire_date,2) from employees // Hire_Date sütununa 2 ay ekleme
-
+select hire_date,add_months(hire_date,2) from employees        // Hire_Date sütununa 2 ay ekleme
 select hire_date,add_months(hire_date,2),last_day(hire_date),months_between(hire_date,add_months(hire_date,2)) from employees 
-
 
 //Sysdate
 select hire_date,add_months(hire_date,2),last_day(hire_date),months_between(hire_date,sysdate)) from employees 
-
 select hire_date,add_months(hire_date,2),last_day(hire_date),trunc(abs(months_between(hire_date,sysdate))))  from employees 
-
 select hire_date,add_months(hire_date,2),last_day(hire_date),round(abs(months_between(hire_date,sysdate))))  from employees 
 --------------------------------------------------------------------------------------------------------------------------------------
-
 Replace : Karakter Deðiþtirme
-
 select first_name , last_name ,replace(substring (trim ('  Sql Developer  '),1,15),'Sql' ,'Oracle') from employees  //Oracle Developer
-
 select first_name , last_name ,replace(substring (trim ('  Sql  Sql Sql Sql   '),1,100),' ' ,'') from employees //SqlSqlSqlSql
-
 --------------------------------------------------------------------------------------------------------------------------------------
 
 
