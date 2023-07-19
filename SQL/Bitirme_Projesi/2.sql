@@ -1,3 +1,8 @@
+-- FACT-DIMENSION Tablosunun Avantajlari :
+Veri analizi ve raporlama sürecini daha yönetilebilir ve performanslý hale getirmektir.
+FACT-DIMENSION tablolarýný kullanmak verilerin daha yapýlandýrmýþ bir þekilde depolanmasýný ve analiz edilmesini saðlar.
+Organize ve yönetilebilir hale getirme.
+
 
 --Fact Tablosu
 CREATE TABLE sales (
@@ -34,7 +39,3 @@ INSERT INTO brand   (ID,brandcode, brand)
 select id,brandcode, brand
 FROM market_sales_master;
 
-
-
-
-select * from client c 
