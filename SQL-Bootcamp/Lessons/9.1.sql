@@ -15,9 +15,9 @@
 --explain :Query calistirildiginda backend taraftaki islemleri gosterir.
 --Analyze :Gelen sonuclari analiz etme komut
 
-explain analyze 
-select * from employees e 
-where first_name = 'Steven'
+	explain analyze 
+	select * from employees e 
+	where first_name = 'Steven'
 
 
 --CIKTI:
