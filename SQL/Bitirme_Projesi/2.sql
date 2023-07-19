@@ -18,32 +18,23 @@ CREATE TABLE sales (
 );
 
 --DIMENSION Tablosu
-CREATE TABLE item (
-  ITEMCODE VARCHAR(50) PRIMARY KEY,
-  ITEMNAME VARCHAR(100),
-  CATEGORY_NAME1 VARCHAR(100),
-  CATEGORY_NAME2 VARCHAR(100),
-  CATEGORY_NAME3 VARCHAR(100)
-);
+INSERT INTO item (ID,itemcode, itemname, category_name1,category_name2, category_name3)   
+SELECT id,itemcode, itemname, category_name1,category_name2, category_name3
+FROM market_sales_master;
 
-CREATE TABLE branch (
-  BRANCHNR VARCHAR(50) PRIMARY KEY,
-  BRANCH VARCHAR(100),
-  CITY VARCHAR(100),
-  REGION VARCHAR(100),
-  LATITUDE NUMERIC,
-  LONGITUDE NUMERIC
-);
+INSERT INTO client (ID,clientcode , clientname, gender)
+SELECT id,clientcode, clientname, gender
+FROM market_sales_master;
 
-CREATE TABLE client (
-  CLIENTCODE VARCHAR(50) PRIMARY KEY,
-  CLIENTNAME VARCHAR(100),
-  GENDER VARCHAR(10)
-);
+INSERT INTO branch  (ID,branchnr, branch, city, region, latitude,longitude) 
+SELECT id,branchnr, branch, city, region, latitude,longitude
+FROM market_sales_master;
+
+INSERT INTO brand   (ID,brandcode, brand)
+select id,brandcode, brand
+FROM market_sales_master;
 
 
-CREATE TABLE  brand(
-  BRANDCODE VARCHAR(50) PRIMARY KEY,
-  BRAND VARCHAR(100)
-);
 
+
+select * from client c 
