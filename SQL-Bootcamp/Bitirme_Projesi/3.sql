@@ -45,7 +45,13 @@ group by  msm.region,s.amount
 7- Fact ve Dimension tablolarýný Joinleyerek aþaðýdaki view lari
 yaratin. 
 7-b En çok satan ürünler (itemname, satilan_urun_sayisi) 
-  
+
+CREATE VIEW numberof_items sold AS
+select   i.itemname as Products 
+FROM  item i 
+left JOIN sales s  ON i.itemcode = s.itemcode
+group by  i.itemname
+order by 1 asc
 
 
   
@@ -74,3 +80,15 @@ FROM market_sales_master msm
 JOIN branch b  ON b.branchnr = msm.branchnr
 JOIN sales s  ON s.id = msm.id
 GROUP BY  msm.branchnr
+
+
+7- Fact ve Dimension tablolarýný Joinleyerek aþaðýdaki view lari
+yaratin. 
+c. Satýþ temsilcisi performansý (salesman,region, toplam_satis)
+
+CREATE VIEW Salesman_Performance AS
+select  distinct  s.salesman as satis_temsilcisi, SUM(s.amount) AS toplam_satis
+FROM  sales s , b.region , s.region
+left JOIN branch b  ON b.branchnr = s.branchnr
+group by  s.salesman , s.amount
+order by 1 asc
