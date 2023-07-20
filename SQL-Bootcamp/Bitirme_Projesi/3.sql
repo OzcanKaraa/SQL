@@ -26,6 +26,12 @@ yaratin.
 
 a. Bölgeye göre toplam satýþ miktarý (region,
 toplam_satis_miktari) 
+CREATE VIEW total_sales_region AS
+select  b.region as bolge ,SUM(s.amount) as toplam_tatis_miktari
+FROM  branch b
+left JOIN sales s  ON s.id = b.id
+group by  b.region,s.amount
+
 
 CREATE VIEW total_sales_region AS
 SELECT msm.region as bolge ,SUM(s.amount) as toplam_tatis_miktari
