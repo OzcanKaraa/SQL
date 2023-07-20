@@ -92,3 +92,47 @@ FROM  sales s , b.region , s.region
 left JOIN branch b  ON b.branchnr = s.branchnr
 group by  s.salesman , s.amount
 order by 1 asc
+
+
+create or replace view satis_temsilcisi_perform_view as 
+          select  s.salesman as satis_temsilcisi , b.region as bölge,  sum(s.amount) as toplam_satis
+          from sales s 
+          inner join branch b on b.branchnr = s.branchnr
+          group by s.salesman , b.region
+          order by s.salesman
+
+
+
+
+
+
+
+          7a. Bölgeye göre toplam satýþ miktarý (region, toplam_satis_miktari (amount))
+
+          create or replace view bolgeye_gore_toplam_satis_view as
+          select b.region as bolge, count(s.amount) as toplam_satis  from sales s 
+          left join branch b on s.branchnr = b.branchnr
+          group by bolge
+          having count(s.amount) > 0
+
+             select * from bolgeye_gore_toplam_satis_view bgtsv 
+
+-- 7b. En çok satan ürünler (itemname, satilan_urun_sayisi(amount)
+
+          create or replace view en_cok_satan_urun_view as 
+          select i.itemname as satilan_urun_adi, count(s.amount) as satilan_urun_sayisi   from sales s 
+          left join item i on i.itemcode = s.itemcode
+          group by satilan_urun_adi
+          order by satilan_urun_sayisi desc
+
+
+
+
+          --7c
+
+          create or replace view satis_temsilcisi_perform_view as 
+          select  s.salesman as satis_temsilcisi , b.region as bölge,  sum(s.amount) as toplam_satis
+          from sales s 
+          inner join branch b on b.branchnr = s.branchnr
+          group by s.salesman , b.region
+          order by s.salesman

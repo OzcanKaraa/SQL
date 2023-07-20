@@ -24,18 +24,18 @@ CREATE TABLE sales (
 
 --DIMENSION Tablosu
 INSERT INTO item (ID,itemcode, itemname, category_name1,category_name2, category_name3)   
-SELECT id,itemcode, itemname, category_name1,category_name2, category_name3
+SELECT DISTINCT id,itemcode, itemname, category_name1,category_name2, category_name3
 FROM market_sales_master;
 
 INSERT INTO client (ID,clientcode , clientname, gender)
-SELECT id,clientcode, clientname, gender
+SELECT DISTINCT id,clientcode, clientname, gender
 FROM market_sales_master;
 
 INSERT INTO branch  (ID,branchnr, branch, city, region, latitude,longitude) 
-SELECT id,branchnr, branch, city, region, latitude,longitude
+SELECT DISTINCT id,branchnr, branch, city, region, latitude,longitude
 FROM market_sales_master;
 
 INSERT INTO brand   (ID,brandcode, brand)
-select id,brandcode, brand
+select DISTINCT id,brandcode, brand
 FROM market_sales_master;
 
