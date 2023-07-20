@@ -27,19 +27,11 @@ yaratin.
 a. Bölgeye göre toplam satýþ miktarý (region,
 toplam_satis_miktari) 
 
-CREATE VIEW sales_region AS
-SELECT r.region, SUM(s.sales_amount) AS total_sales_amount
-FROM sales s
-JOIN region r ON s.region_id = r.region_id
-GROUP BY r.region;
-
-
 CREATE VIEW total_sales_region AS
-SELECT msm.branchnr
+SELECT msm.region,SUM(s.amount)
 FROM market_sales_master msm 
-JOIN branch b  ON b.branchnr = msm.branchnr
 JOIN sales s  ON s.id = msm.id
-GROUP BY  msm.branchnr
+group by  msm.region,s.amount
 
 
 
@@ -54,17 +46,6 @@ yaratin.
 -----------------------------------------------------------
 7- Fact ve Dimension tablolarýný Joinleyerek aþaðýdaki view lari
 yaratin. 
-c. Satýþ temsilcisi performansý (salesman,region, toplam_satis) 
-
-
-
-
-
-
-
-
-
-
 
 CREATE VIEW sales_region AS
 select b.region, SUM(msm.sales_amount) AS total_sales_amount
