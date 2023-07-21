@@ -41,7 +41,7 @@ select * from market_sales_master
 --branch Tablosu olusturma
 CREATE table branch (
   ID SERIAL PRIMARY KEY,
-  BRANCHNR VARCHAR(50),
+  BRANCHNR VARCHAR(50) PRIMARY KEY,
   BRANCH VARCHAR(100),
   CITY VARCHAR(100),
   REGION VARCHAR(100),
@@ -76,7 +76,7 @@ CREATE table branch (
   GENDER VARCHAR(10)
 );
 
-
+select count(*) from brand
 
 
 
