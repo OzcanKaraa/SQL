@@ -1,9 +1,12 @@
-CREATE EXTENSION IF NOT EXISTS aws_s3 CASCADE; ##Bu komut aws_s3 extension i yaratmak icin kullanilir.
+--Bu komut aws_s3 extension i yaratmak icin kullanilir.
+CREATE EXTENSION IF NOT EXISTS aws_s3 CASCADE; 
 
+--Olusturulan BUCKET import etme.
  SELECT aws_s3.table_import_from_s3(
   'market_sales_master', '', '(FORMAT CSV, HEADER true)', 
   'sqlproje', 'test_market_utf_full.csv', 'eu-west-3');
 
+  --market_sales_master Tablosu olusturma
  CREATE TABLE market_sales_master (
   ID SERIAL PRIMARY KEY,
   ITEMCODE VARCHAR(50),
@@ -32,12 +35,10 @@ CREATE EXTENSION IF NOT EXISTS aws_s3 CASCADE; ##Bu komut aws_s3 extension i yar
   ENDDATE DATE,
   GENDER VARCHAR(10)
 );
-
-
-
 select * from market_sales_master 
 
 
+--branch Tablosu olusturma
 CREATE table branch (
   ID SERIAL PRIMARY KEY,
   BRANCHNR VARCHAR(50),
@@ -49,7 +50,7 @@ CREATE table branch (
 );
 
 
-
+--item Tablosu olusturma
  CREATE TABLE item (
   ID SERIAL PRIMARY KEY,
   ITEMCODE VARCHAR(50),
@@ -60,12 +61,14 @@ CREATE table branch (
 );
 
 
+--brand Tablosu olusturma
  CREATE TABLE brand (
   ID SERIAL PRIMARY KEY,
   BRANDCODE VARCHAR(50),
   BRAND VARCHAR(100)
 );
 
+--client Tablosu olusturma
  CREATE TABLE client (
   ID SERIAL PRIMARY KEY,
   CLIENTCODE VARCHAR(50),
