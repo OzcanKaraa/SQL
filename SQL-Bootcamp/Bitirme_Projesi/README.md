@@ -80,4 +80,6 @@ olusturup hangi ayda ne kadar satilmis gosterin. Not: Veri
 setimizde (csv dosyasinda) sadece Ocak, Subat ve Mart aylarinin 
 verisi mevcut. </p> 
 
+<img>sqlamazon.png</img>
+
 
