@@ -63,8 +63,7 @@ toplam_satis_miktari) </p>
 <p>b. En çok satan ürünler (itemname, satilan_urun_sayisi) </p> 
 <p>c. Satýþ temsilcisi performansý (salesman,region, toplam_satis) </p> 
 <p>8- Fact ve Dimension tablolarinizi Power BI Masaüstü uygulamasýnin
-Data Source kismina indirin. (Baglanti ve tablo secimleri icin 7/12 
-ders kaydinin son kisimlarina bakabilirsiniz) </p> 
+Data Source kismina indirin. </p> 
 <p>9- Power BI uzerinde Fact ve Dimension tablolarinizi Joinleyerek </p> 
 <p>a. Magazalarin lokasyonlarini latitude ve longitude kolonalari 
 uzerinden Power BI Map gorseli ile gosterin.</p>  
