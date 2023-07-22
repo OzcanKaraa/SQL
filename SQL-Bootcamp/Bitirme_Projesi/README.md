@@ -1,10 +1,11 @@
 <h2>Bitirme Projesi </h2>
+<br>
 <p> Kurulum : 
-1- AWS Hesabý Oluþturun 
-2- PostgreSQL Veritabaný Oluþturun 
+<p>1- AWS Hesabý Oluþturun </p>
+<p>2- PostgreSQL Veritabaný Oluþturun 
 a. IP adresinizi yarattiginiz PostgreSQL in Inbound Rule kismina 
-ekleyin(Security Group) 
-3- Power BI Masaüstü uygulamasýný yükleyin 
+ekleyin(Security Group) </p>
+<p>3- Power BI Masaüstü uygulamasýný yükleyin 
 a. PostgreSQL veritabanýna baðlanabilmek için connection string i 
 yeni PostgreSQL baglantisina ekleyin 
 b. Aldigini baglanti hatasi icin güvenlik Encrypted connection 
