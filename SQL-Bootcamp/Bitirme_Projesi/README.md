@@ -8,7 +8,7 @@ ekleyin(Security Group) </p>
 a. PostgreSQL veritabanýna baðlanabilmek için connection string i 
 yeni PostgreSQL baglantisina ekleyin 
 b. Aldigini baglanti hatasi icin güvenlik Encrypted connection 
-check box ini kaldirin (ders videosunda mevcut) </p>
+check box ini kaldirin  </p>
 <p></p>
 
 <p> 4- AWS Hesabinizda bir S3 bucket olusturun 
@@ -80,3 +80,5 @@ chart’grafigi olusturun </p>
 olusturup hangi ayda ne kadar satilmis gosterin. Not: Veri 
 setimizde (csv dosyasinda) sadece Ocak, Subat ve Mart aylarinin 
 verisi mevcut. </p> 
+
+
