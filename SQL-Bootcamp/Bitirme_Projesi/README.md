@@ -1,5 +1,5 @@
 <h2>Bitirme Projesi </h2>
-<p> <b>KURULUM</b></p>: 
+<p> <b>KURULUM : </b></p>
 <p>1- AWS Hesabý Oluþturun </p>
 <p>2- PostgreSQL Veritabaný Oluþturun 
 a. IP adresinizi yarattiginiz PostgreSQL in Inbound Rule kismina 
@@ -14,7 +14,7 @@ check box ini kaldirin (ders videosunda mevcut) </p>
 <p> 4- AWS Hesabinizda bir S3 bucket olusturun 
 a. test_market_utf_full.csv dosyasini Google Drive dan download 
 edip, kendi S3 bucket iniza yukleyin </p>
-<p>PROJE :</p>
+<b><p>PROJE :</p></b>
 <p>1- PostgreSQL'de yeni bir proje kullanýcýsý oluþturun ve bu 
 kullanýcýyý projeniz için þema olarak kullanmaya baþlayýn.</p> 
 a. test_market_utf_full.csv dosyasýný analiz edin ve yarattiginiz 
