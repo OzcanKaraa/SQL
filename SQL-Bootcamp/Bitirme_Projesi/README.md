@@ -1,13 +1,13 @@
 <h2>Bitirme Projesi </h2>
 <p> <b>KURULUM : </b></p>
-<p>1- AWS Hesabı Oluşturun </p>
-<p>2- PostgreSQL Veritabanı Oluşturun 
+<p>1- AWS HesabÄ± OluÅŸturun </p>
+<p>2- PostgreSQL VeritabanÄ± OluÅŸturun 
 a. IP adresinizi yarattiginiz PostgreSQL in Inbound Rule kismina 
 ekleyin(Security Group) </p>
-<p>3- Power BI Masaüstü uygulamasını yükleyin 
-a. PostgreSQL veritabanına bağlanabilmek için connection string i 
+<p>3- Power BI MasaÃ¼stÃ¼ uygulamasÄ±nÄ± yÃ¼kleyin 
+a. PostgreSQL veritabanÄ±na baÄŸlanabilmek iÃ§in connection string i 
 yeni PostgreSQL baglantisina ekleyin 
-b. Aldigini baglanti hatasi icin güvenlik Encrypted connection 
+b. Aldigini baglanti hatasi icin gÃ¼venlik Encrypted connection 
 check box ini kaldirin  </p>
 <p></p>
 
@@ -15,34 +15,34 @@ check box ini kaldirin  </p>
 a. test_market_utf_full.csv dosyasini Google Drive dan download 
 edip, kendi S3 bucket iniza yukleyin </p>
 <b><p>PROJE :</p></b>
-<p>1- PostgreSQL'de yeni bir proje kullanıcısı oluşturun ve bu 
-kullanıcıyı projeniz için şema olarak kullanmaya başlayın.</p> 
-a. test_market_utf_full.csv dosyasını analiz edin ve yarattiginiz 
+<p>1- PostgreSQL'de yeni bir proje kullanÄ±cÄ±sÄ± oluÅŸturun ve bu 
+kullanÄ±cÄ±yÄ± projeniz iÃ§in ÅŸema olarak kullanmaya baÅŸlayÄ±n.</p> 
+a. test_market_utf_full.csv dosyasÄ±nÄ± analiz edin ve yarattiginiz 
 kullanicinin semasini kullanarak market_sales_master adinda bir 
-tablo oluşturun. Tablo her satira uygun veri tipleri 
+tablo oluÅŸturun. Tablo her satira uygun veri tipleri 
 kullanmalidir, Varchar, Date, TimeStamp, Numeric gibi. </p>
 <p>3- AWS S3 Import Utility sini kullanarak test_market_utf_full.csv 
-dosyasındaki verieri PostgreSQL'deki market_salesu_master tablosuna 
-yükleyin. Gerekli komurlar: </p>
+dosyasÄ±ndaki verieri PostgreSQL'deki market_salesu_master tablosuna 
+yÃ¼kleyin. Gerekli komurlar: </p>
 <p>1-) CREATE EXTENSION IF NOT EXISTS aws_s3 CASCADE; ##Bu 
 komut aws_s3 extension i yaratmak icin kullanilir. </p>
 <p>2-) SELECT aws_s3.table_import_from_s3( 
  'market_sales_master', '', '(FORMAT CSV, HEADER 
 true)', 
  'sqlcoursebucket', 'test_market_utf_full.csv', 'euwest-3');
-–- degisiklik olarak sadece 'sqlcoursebucket' 
+â€“- degisiklik olarak sadece 'sqlcoursebucket' 
 parametresini sizin kendi bucket isminizle degistirin. 
 Eger eu-west-3 den farkli bir region kullandiysaniz onu 
 da degistirmeniz gerekir. Dosya ismi ve tablo ismi de 
 yine select icerisinde, farkli isim kullanirsaniz bu 
 query I de degistirmeniz gerekir.</p>
-<p>4- Market_sales tablosunu kullanarak aşağıdaki FACT ve DIMENSION 
-tablolarını oluşturun (bunun neden avantajlı olduğunu açıklayın) </p>
+<p>4- Market_sales tablosunu kullanarak aÅŸaÄŸÄ±daki FACT ve DIMENSION 
+tablolarÄ±nÄ± oluÅŸturun (bunun neden avantajlÄ± olduÄŸunu aÃ§Ä±klayÄ±n) </p>
 <p>a. FACT Tablosu: 
 i. sales (id, itemcode, ficheno, amount, price, 
 linenettotal, linenet, branchnr, salesman, clientcode, 
 brandcode, startdate, enddate) </p>
-<p>b. DIMENSION tabloları: 
+<p>b. DIMENSION tablolarÄ±: 
 i. item (itemcode, itemname, category_name1, 
 category_name2, category_name3) 
 ii. branch (branchnr, branch, city, region, latitude, 
@@ -50,19 +50,19 @@ longitude)
 iii. client (clientcode, clientname, gender) 
 iv. brand (brandcode, brand) </p>
 <p>5- 'market_sales_master' tablosunu kaynak olarak kullanarak, 
-fact ve dimension tablolarına verileri yükleyin </p>
+fact ve dimension tablolarÄ±na verileri yÃ¼kleyin </p>
 <p>6- sales tablosu uzerinde id, itemcode ve salesman uzerinden ayri 
 ayri indexler olusturun.</p> 
 <p>a.Bonus Puan : Olusturdugunuz indexleri bir JOIN icinde kullanip, 
 explain analyze querysi ile nasil bir avantaj yarattigini 
 gosterin.</p> 
-<p>7- Fact ve Dimension tablolarını Joinleyerek aşağıdaki view lari 
+<p>7- Fact ve Dimension tablolarÄ±nÄ± Joinleyerek aÅŸaÄŸÄ±daki view lari 
 yaratin. </p> 
-<p>a. Bölgeye göre toplam satış miktarı (region, 
+<p>a. BÃ¶lgeye gÃ¶re toplam satÄ±ÅŸ miktarÄ± (region, 
 toplam_satis_miktari) </p> 
-<p>b. En çok satan ürünler (itemname, satilan_urun_sayisi) </p> 
-<p>c. Satış temsilcisi performansı (salesman,region, toplam_satis) </p> 
-<p>8- Fact ve Dimension tablolarinizi Power BI Masaüstü uygulamasınin
+<p>b. En Ã§ok satan Ã¼rÃ¼nler (itemname, satilan_urun_sayisi) </p> 
+<p>c. SatÄ±ÅŸ temsilcisi performansÄ± (salesman,region, toplam_satis) </p> 
+<p>8- Fact ve Dimension tablolarinizi Power BI MasaÃ¼stÃ¼ uygulamasÄ±nin
 Data Source kismina indirin. </p> 
 <p>9- Power BI uzerinde Fact ve Dimension tablolarinizi Joinleyerek </p> 
 <p>a. Magazalarin lokasyonlarini latitude ve longitude kolonalari 
@@ -73,13 +73,12 @@ chart ile gosterin </p>
 seviyeye inildiginde en cok satan category_name2 bir sonraki 
 adimda ise en cok satan category_name3 urunlerini gosteriniz. </p> 
 <p>d. En cok satis yapan satis temsilcilerini ve linenettotal 
-uzerinden toplam satis degerlerini gosteren ‘clustered bar 
-chart’grafigi olusturun </p> 
-<p>e. Aya gore linenettotal alani uzerinden ‘pie chart grafigi’ 
+uzerinden toplam satis degerlerini gosteren â€˜clustered bar 
+chartâ€™grafigi olusturun </p> 
+<p>e. Aya gore linenettotal alani uzerinden â€˜pie chart grafigiâ€™ 
 olusturup hangi ayda ne kadar satilmis gosterin. Not: Veri 
 setimizde (csv dosyasinda) sadece Ocak, Subat ve Mart aylarinin 
 verisi mevcut. </p> 
 
-<img>sqlamazon.png</img>
 
 
