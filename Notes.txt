@@ -12,6 +12,7 @@ Oracle Database Conection Tools
 	SqlPlus        (free) 
 	Sql Developer  (free)
 
+
 --------------------------------------------------------------------------------------------------------------------------------------
 	DBA: VERI TABANI YONETICISI (DATABASE ADMINISTOR)
 	GRANT : Yetki verir.
